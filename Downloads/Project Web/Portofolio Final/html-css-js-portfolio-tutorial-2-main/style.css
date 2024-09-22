@@ -1,0 +1,612 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT SECTION */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  margin: 0 auto; /* Ensure proper centering */
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+  margin: 2rem auto;
+  padding: 1rem; /* Adjust padding if necessary */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+  width: 90%; /* Ensure it fits well on different screens */
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  #contact {
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .contact-info-upper-container {
+    width: 100%; /* Ensure it uses full width on smaller screens */
+  }
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Container untuk slider berita */
+.news-carousel .position-relative {
+  position: relative;
+}
+
+.news-carousel .overflow-hidden {
+  overflow: hidden;
+}
+
+.news-carousel .img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.news-carousel .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.news-carousel .badge {
+  font-size: 14px;
+}
+
+.news-carousel a {
+  color: white;
+  text-decoration: none;
+}
+
+.news-carousel .h6 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.news-carousel .text-white {
+  color: white;
+}
+
+/* Increase font size for project description */
+.news-carousel .project-description {
+  font-size: 20px; /* Adjust this value */
+  line-height: 1.5; /* Optional */
+}
+
+/* Button Style for Carousel */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.owl-prev, .owl-next {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White arrow */
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.owl-prev:hover, .owl-next:hover {
+  background-color: #f5c2c4; /* Pink color on hover */
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
+}
+
+.owl-prev {
+  left: -30px;
+}
+
+.owl-next {
+  right: -30px;
+}
+
+/* Icon Style */
+.owl-prev:before, .owl-next:before {
+  content: '';
+  font-family: 'Font Awesome 5 Free'; /* Use font-awesome for arrow icons */
+  font-weight: 900;
+}
+
+.owl-prev:before {
+  content: '\f104'; /* Left arrow icon */
+}
+
+.owl-next:before {
+  content: '\f105'; /* Right arrow icon */
+}
+
+/* Carousel Navigation Buttons */
+.owl-carousel .owl-nav button.owl-prev, 
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 50%; /* Make buttons circular */
+    width: 50px; /* Increase size */
+    height: 50px; /* Increase size */
+    font-size: 24px; /* Make arrow bigger */
+    opacity: 0.8; /* Slight transparency */
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect for Previous Button */
+.owl-carousel .owl-nav button.owl-prev:hover {
+    background-color: #4379F2; /* Lighter gray on hover for left */
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Hover Effect for Next Button */
+.owl-carousel .owl-nav button.owl-next:hover {
+    background-color: #4379F2; /* Orange/red on hover for right */
+    opacity: 1; /* Full opacity on hover */
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: -60px; /* Adjust position to the left */
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: -60px; /* Adjust position to the right */
+}
+
+/* Add custom arrow icons */
+.owl-carousel .owl-nav button.owl-prev::before, 
+.owl-carousel .owl-nav button.owl-next::before {
+    content: '\f104'; /* FontAwesome left arrow icon */
+    font-family: FontAwesome;
+}
+
+.owl-carousel .owl-nav button.owl-next::before {
+    content: '\f105'; /* FontAwesome right arrow icon */
+}
+
+.category {
+  background-color: #007bff; /* Warna biru */
+  color: white; /* Warna teks putih */
+  border-radius: 5px; /* Sudut melengkung */
+  padding: 5px 10px; /* Padding */
+}
+
+/* Websites - Blue */
+.category-websites {
+  background-color: #007bff; /* Blue */
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Prototype - Green */
+.category-prototype {
+  background-color: #007bff; /* Green */
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Data Analysis - Yellow */
+.category-data-analysis {
+  background-color: #007bff; /* Yellow */
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+
+

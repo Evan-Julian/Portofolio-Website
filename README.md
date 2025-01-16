@@ -51,5 +51,5 @@ To run this project locally, follow these steps:
 
 - Email: evanpriyasa.id@gmail.com
 - LinkedIn: https://www.linkedin.com/in/evan-julian-8aa5a2292/
-- GitHub: Evan-Julian
+- GitHub: [Evan-Julian](https://github.com/Evan-Julian)
 

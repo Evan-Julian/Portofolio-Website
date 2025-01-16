@@ -2,6 +2,9 @@
 
 Welcome to my personal portfolio website! This project showcases my web development skills, highlighting projects and experiences as a web designer and developer.
 
+## Screenshot
+![Portfolio Homepage](Homepage.jpg)
+
 ## Description
 
 This portfolio website is designed to display information about myself, including:
@@ -28,25 +31,25 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/Evan-Julian/Portofolio-Website.git
 
+
 2. Navigate into the project folder:
    ```bash
    cd Portofolio-Website
 
 3.Open the index.html file in your browser to view the website:
 
-- Technologies Used
-HTML5
-CSS3
-JavaScript
-Bootstrap 4 (for responsive design)
-Isotope.js (for filtering portfolio items)
-Google Fonts (Poppins)
-
-## Screenshot
+## Technologies Used
+  
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 4 (for responsive design)
+- Isotope.js (for filtering portfolio items)
+- Google Fonts (Poppins)
 
 ## Contact
 
-Email: evanpriyasa.id@gmail.com
-LinkedIn: Evan Julian
-GitHub: Evan-Julian
+- Email: evanpriyasa.id@gmail.com
+- LinkedIn: https://www.linkedin.com/in/evan-julian-8aa5a2292/
+- GitHub: Evan-Julian
 

@@ -260,7 +260,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  -webkit-appearance: button; 
 }
 
 button:not(:disabled),
@@ -287,8 +287,8 @@ input[type="checkbox"] {
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
-input[type="month"] {
-  -webkit-appearance: listbox;
+input[type="month"] { 
+  -webkit-appearance: listbox; 
 }
 
 textarea {
@@ -11706,5 +11706,93 @@ footer .social-icons a:hover {
   color: #ff4757;
   font-weight: bold;
 }
+.portfolio-item {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for certificate images */
+.certificate-img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.certificate-img:hover {
+  transform: scale(1.1);
+}
+
+/* Style for the buttons */
+.btn-primary {
+  background-color: #F85C70;
+  border-color: #F85C70;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #f63750;
+  border-color: #f62b45;
+}
+
+.content-holder {
+  padding: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .portfolio-container {
+      display: flex;
+      flex-direction: column;
+  }
+}
+.btn-custom {
+  background-color: #25D366; /* Mengubah warna latar belakang menjadi hijau */
+  border-color: #25D366; /* Mengubah warna border menjadi hijau */
+  color: white; /* Mengubah warna teks menjadi putih */
+}
+
+.btn-custom i {
+  color: white; /* Mengubah warna ikon menjadi putih */
+}
+
+.btn-custom:hover {
+  background-color: #0d9b34; /* Warna hijau sedikit lebih gelap saat tombol dihover */
+  border-color: #0d9b34;
+  color: white; /* Pastikan teks tetap putih saat tombol dihover */
+}
+
+.btn-custom:hover i {
+  color: white; /* Pastikan ikon tetap putih saat tombol dihover */
+}
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+
+
+
 
 

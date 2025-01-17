@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+
+/* Global Styles */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* Root Color Variables */
+:root {
+    --container-color: #1a1e21;
+    --second-color: #F85C70;
+    --text-color: #172317;
+    --bg-color: #fff;
+}
+
+/* Selection Color */
+::selection {
+    color: var(--bg-color);
+    background: var(--second-color);
+}
+
+/* Home Section */
+.home {
+    width: 100%;
+    min-height: 440px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background for page 1 */
+.home-1 {
+    background: url("/assets/imgs/CaseStudyHeader.png") center/cover;
+}
+
+/* Background for page 2 */
+.home-2 {
+    background: url("/assets/imgs/CaseStudyHeader2.png") center/cover;
+}
+
+/* More pages */
+.home-3 {
+    background: url("/assets/imgs/CaseStudyHeader3.png") center/cover;
+}
+
+/* More pages */
+.home-4 {
+    background: url("/assets/imgs/CaseStudyHeader4.png") center/cover;
+}
+
+/* More pages */
+.home-5 {
+    background: url("/assets/imgs/CaseStudyHeader5.png") center/cover;
+}
+
+.home-text {
+    color: var(--bg-color);
+    text-align: center;
+}
+
+.home-title {
+    font-size: 3.5rem;
+}
+
+.home-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Case Study Content */
+.case-study-content {
+    padding: 30px;
+    background-color: #fff;  /* Ensure the background is white */
+    border-radius: 10px;
+    box-shadow: none;  /* Remove any shadow */
+}
+
+.case-study-content h3 {
+    color: var(--second-color);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.case-study-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.image-placeholder img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+/* Sidebar for Related Case Studies */
+.sidebar {
+    margin-top: 20px;
+}
+
+.sidebar h4 {
+    color: var(--second-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar .related-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.sidebar-img {
+    margin-right: 15px;
+}
+
+.sidebar-info {
+    flex-grow: 1;
+}
+
+.sidebar-info a {
+    font-size: 1.1rem;
+    color: var(--second-color);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sidebar-info a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.sidebar-info p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Footer Section */
+footer {
+    background-color: #111;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--second-color);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .home {
+        min-height: 380px;
+    }
+
+    .home-title {
+        font-size: 3rem;
+    }
+
+    .case-study-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .case-study-content p {
+        font-size: 0.9rem;
+    }
+
+    .sidebar .related-item {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .sidebar-img {
+        margin-bottom: 10px;
+    }
+
+    .sidebar-info {
+        text-align: center;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+
+    footer p {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 30px 20px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tag Cloud Section */
+.tag-cloud {
+    margin-top: 30px;
+}
+
+.tag-cloud h4 {
+    color: var(--second-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.tag-cloud .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-cloud .tags a {
+    padding: 6px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--second-color);
+    border-radius: 25px;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tag-cloud .tags a:hover {
+    background-color: #fff;
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .tag-cloud .tags a {
+        font-size: 0.9rem;
+        padding: 5px 12px;
+    }
+}

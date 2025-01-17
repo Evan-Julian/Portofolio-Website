@@ -46,28 +46,29 @@ img {
 
 /* Background for page 1 */
 .home-1 {
-    background: url("/assets/imgs/CaseStudyHeader.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader.png") center/cover;
 }
 
 /* Background for page 2 */
 .home-2 {
-    background: url("/assets/imgs/CaseStudyHeader2.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader2.png") center/cover;
 }
 
 /* More pages */
 .home-3 {
-    background: url("/assets/imgs/CaseStudyHeader3.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader3.png") center/cover;
 }
 
 /* More pages */
 .home-4 {
-    background: url("/assets/imgs/CaseStudyHeader4.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader4.png") center/cover;
 }
 
 /* More pages */
 .home-5 {
-    background: url("/assets/imgs/CaseStudyHeader5.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader5.png") center/cover;
 }
+
 
 .home-text {
     color: var(--bg-color);

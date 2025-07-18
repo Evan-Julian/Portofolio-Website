@@ -21,7 +21,7 @@
   --warning: #FF8882;
   --danger: #F85C70;
   --light: #f8f9fa;
-  --dark: #343a40;
+  --dark: #343a40; /* Ini adalah warna abu-abu gelap yang digunakan oleh bg-dark */
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -1168,12 +1168,8 @@ pre code {
     max-width: 41.66667%;
   }
   .col-md-6 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
-  }
+ opacity: 1 !important; /* <--- Ini juga bisa jadi masalah jika item seharusnya disembunyikan */
+}
   .col-md-7 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 58.33333%;
@@ -7189,7 +7185,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #ffffff !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -11201,7 +11197,7 @@ p {
   position: relative;
   padding-left: 0;
   padding-right: 0;
-  margin: 10px -5px;
+  margin: 10px -5px; /* Margin horizontal ini bisa memengaruhi tata letak Isotope */
   overflow: hidden;
   border-radius: 2px;
   -webkit-backface-visibility: hidden;
@@ -11209,7 +11205,7 @@ p {
 }
 
 .portfolio .portfolio-container .portfolio-item .content-holder {
-  position: absolute;
+   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -11485,8 +11481,55 @@ pre .code {
   font-size: 14px;
 }
 
-.footer {
-  background: #17263C;
+
+/* === FOOTER STYLING === */
+footer {
+  flex-shrink: 0; /* Mencegah footer menyusut */
+  margin-top: 0; /* Pastikan tidak ada margin top */
+  background-color: var(--dark); /* Gunakan variabel CSS untuk konsistensi */
+  color: var(--white); /* Gunakan variabel CSS */
+  font-size: 14px;
+  padding: 1.5rem 0; /* Sesuai py-4 di HTML */
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+footer a:hover {
+  color: var(--danger); /* Gunakan variabel CSS untuk konsistensi */
+}
+
+footer .social-icons a {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+footer .social-icons a:hover {
+  color: var(--danger);
+}
+
+footer ul.list-unstyled li i {
+    margin-right: 0.5rem;
+    color: inherit;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    max-width: none;
+    padding-left: 0;
+    list-style: none;
+}
+
+footer .social-icons a {
+    color: var(--light);
+}
+
+footer .social-icons a:hover {
+    color: var(--danger);
 }
 
 .header {
@@ -11670,8 +11713,9 @@ pre .code {
   margin-top: 10px;
 }
 
+/* Pertahankan bagian ini untuk styling footer Anda */
 footer {
-  background-color: #343a40;
+  background-color: #343a40; /* Warna abu-abu gelap yang Anda inginkan */
   color: #ffffff;
   font-size: 14px;
 }
@@ -11693,6 +11737,69 @@ footer .social-icons a {
 footer .social-icons a:hover {
   color: #dc3545;
 }
+
+/* Footer Contact Info Icons Spacing */
+footer ul.list-unstyled li i {
+    margin-right: 0.5rem; /* spacing between icon and text */
+    color: inherit; /* icon color inherits from parent (white) */
+}
+
+/* Footer Social Icons Layout and Spacing */
+footer .social-icons {
+    display: flex;
+    gap: 10px; /* spacing between social icons */
+    justify-content: flex-start; /* align icons to left */
+    max-width: none; /* override max-width if any */
+    padding-left: 0; /* remove default list padding */
+    list-style: none; /* remove bullet points */
+}
+
+footer .social-icons a {
+    color: var(--light); /* ensure icon color is white */
+}
+
+footer .social-icons a:hover {
+    color: var(--danger); /* hover color red */
+}
+
+/* Dalam assets/css/styles.css Anda */
+
+html {
+  height: 100%; /* Penting untuk flexbox layout */
+  /* Coba dengan overflow-y: scroll atau auto untuk memastikan scrollbar vertikal muncul */
+  /* Jika Anda yakin tidak ada overflow-x yang tidak diinginkan, hapus saja overflow-x: hidden; */
+  overflow-y: scroll; /* Atau auto, untuk memastikan scrollbar muncul jika konten lebih panjang */
+  scroll-behavior: smooth; /* Opsional: membuat scroll lebih halus */
+}
+
+body {
+  margin: 0;
+  padding: 0; /* Pastikan ini diset nol di sini juga */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Penting: body minimal setinggi viewport */
+  /* Hapus overflow-x: hidden; di sini jika Anda sudah menetapkannya di html */
+  /* body { ... properti lain ... } */
+}
+
+.content-wrap {
+  flex: 1; /* Memastikan ini mengambil semua sisa ruang vertikal */
+  display: flex; /* Tambahkan ini jika content-wrap membungkus flex containers lain */
+  flex-direction: column; /* Mengatur konten di dalamnya secara vertikal */
+  min-height: fit-content; /* Memungkinkan konten menyesuaikan tingginya */
+}
+
+/* Pastikan footer tidak memiliki margin-top yang tidak diinginkan */
+footer {
+  flex-shrink: 0; /* Mencegah footer menyusut */
+  margin-top: 0; /* Pastikan tidak ada margin top yang tidak disengaja */
+  /* Jaga properti footer lainnya yang sudah ada */
+  background-color: #343a40;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 1.5rem 0; /* Sesuai py-4 di HTML */
+}
+
 /* Filter Buttons */
 .filters a {
   color: #000;
@@ -11707,8 +11814,8 @@ footer .social-icons a:hover {
   font-weight: bold;
 }
 .portfolio-item {
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Hapus atau komentari baris ini sementara untuk debugging */
+
 }
 
 .portfolio-item:hover {
@@ -11791,8 +11898,138 @@ footer .social-icons a:hover {
   z-index: 0;
 }
 
+/* Custom styles for About section buttons layout */
+.about-buttons-group {
+    display: flex; /* Menggunakan Flexbox untuk menata item secara horizontal */
+    flex-wrap: wrap; /* Memungkinkan item untuk melompat ke baris baru jika ruang tidak cukup */
+    /* Opsional: Anda bisa menambahkan justify-content: center; jika ingin tombol berada di tengah secara horizontal */
+}
 
+/* Custom styles for About section buttons layout */
+.about-buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Mengatur tombol agar sejajar di awal */
+    gap: 10px; /* Memberi jarak antar tombol */
+}
+/* Custom styles for About section buttons layout */
+.about-buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Mengatur tombol agar sejajar di awal */
+    gap: 10px; /* Memberi jarak antar tombol */
+}
 
+/* Footer Contact Info Icons Spacing */
+footer ul.list-unstyled li i {
+    margin-right: 0.5rem; /* Menambahkan spasi antara ikon dan teks */
+    color: inherit; /* Memastikan warna ikon mengikuti warna teks induk (putih) */
+}
 
+/* Footer Social Icons Layout and Spacing */
+footer .social-icons {
+    display: flex;
+    gap: 10px; /* Jarak antar ikon sosial */
+    justify-content: flex-start; /* Sejajarkan ikon ke kiri */
+    max-width: none; /* Mengesampingkan max-width sebelumnya jika ada konflik */
+    padding-left: 0; /* Pastikan tidak ada padding daftar default */
+    list-style: none; /* Hapus bullet list */
+}
+
+footer .social-icons a {
+    color: var(--light); /* Pastikan warna ikon putih */
+}
+
+footer .social-icons a:hover {
+    color: var(--danger); /* Warna hover merah */
+}
+
+/* Styling yang mungkin Anda cari yang terkait dengan testimonial */
+
+/* Ini adalah wadah utama untuk setiap testimonial */
+.testimonial-card {
+  padding: 40px; /* Saat ini di styles.css Anda */
+  border: 1px solid #dee2e6;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Gambar profil di dalam testimonial card */
+.testimonial-card .testimonial-img {
+    margin-bottom: 3px; /* Ada margin-bottom 3px di gambar Anda dari gambar terakhir */
+}
+
+/* Nama orang yang memberikan testimonial */
+.testimonial-name {
+    /* styling nama, tidak ada .testimonial-name sendiri, tapi mungkin ada di bagian lain */
+}
+
+/* Posisi atau jabatan orang yang memberikan testimonial */
+.testimonial-position {
+    /* styling posisi, tidak ada .testimonial-position sendiri, tapi mungkin ada di bagian lain */
+}
+
+/* Teks atau kutipan testimonial */
+.testimonial-text {
+    /* styling teks testimonial, tidak ada .testimonial-text sendiri, tapi mungkin ada di bagian lain */
+}
+
+/* Beberapa aturan di luar yang spesifik untuk testimonial-card */
+/* Misalnya, jika ada pengaturan gambar default untuk testimonial-img di suatu tempat,
+   tapi pada kasus ini Anda memiliki inline style di HTML yang mengesampingkannya. */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+#testimonials .row.justify-content-center { /* Menargetkan row khusus di bagian testimonials */
+    align-items: stretch; /* Ini adalah kunci! Membuat semua flex items (kolom) meregang setinggi yang tertinggi */
+}
+
+.testimonial-card {
+    /* Properti yang sudah ada di .testimonial-card */
+    height: 100%; /* Penting: agar kartu mengambil seluruh tinggi kolomnya */
+    display: flex; /* Menggunakan flexbox di dalam kartu itu sendiri */
+    flex-direction: column; /* Mengatur konten kartu secara vertikal */
+    justify-content: space-between; /* Mendistribusikan ruang antara elemen-elemen di dalam kartu */
+    /* Tambahan lainnya yang Anda inginkan seperti padding, border, shadow, dll. */
+    padding: 25px; /* Sesuaikan padding agar tidak terlalu ketat */
+    border: 1px solid #dee2e6;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Pastikan semua elemen di dalam kartu memiliki margin yang konsisten */
+.testimonial-card .testimonial-img {
+    margin-bottom: 15px; /* Jarak antara gambar dan nama */
+}
+
+.testimonial-name {
+    margin-bottom: 5px; /* Jarak antara nama dan posisi */
+}
+
+.testimonial-position {
+    margin-bottom: 15px; /* Jarak antara posisi dan teks testimonial */
+}
+
+.testimonial-text {
+    /* Jika Anda ingin teks mengisi ruang, Anda bisa mengatur flex-grow */
+    flex-grow: 1; /* Ini memungkinkan teks mengambil ruang yang tersedia */
+    /* Properti teks lainnya */
+    font-style: italic;
+    line-height: 1.6;
+    color: #495057;
+    opacity: 0.9;
+}
 
 

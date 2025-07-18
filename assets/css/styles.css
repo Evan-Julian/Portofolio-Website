@@ -12032,4 +12032,95 @@ footer .social-icons a:hover {
     opacity: 0.9;
 }
 
+/* FILTER TAG BASE STYLE */
+.filter-tag {
+  display: inline-block;
+  background-color: #f5c2c4;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 6px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(245, 194, 196, 0.3);
+}
+
+/* Hover animation */
+.filter-tag:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(245, 194, 196, 0.5);
+}
+
+/* Active click animation */
+.filter-tag:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(245, 194, 196, 0.4);
+}
+.fadein {
+  opacity: 0;
+  transform: translateY(30px); /* Biar muncul dari bawah dikit */
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.2s; /* Kamu bisa ubah-ubah sesuai keinginan */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-item:hover::after {
+  content: "Click to view!";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.counter {
+  transition: all 0.3s ease-in-out;
+}
+/* 🌟 Scroll Progress Bar */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #F85C70; /* warna merah ala theme kamu */
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.2s ease-out;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  background-color: #f44336;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.floating-btn i {
+  font-size: 20px;
+}
+.floating-btn:hover {
+  transform: scale(1.1);
+  background-color: #d32f2f;
+}
+
 

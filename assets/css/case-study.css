@@ -8,9 +8,21 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #f9f9f9; /* Very light gray background for a softer feel */
+    font-size: 16px; /* Base font size */
+    line-height: 1.6; /* Improved readability for body text */
+    color: var(--text-color); /* Ensure text color is applied globally */
+}
+
 a {
     text-decoration: none;
     color: var(--text-color);
+    transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+a:hover {
+    color: var(--second-color); /* Example: change color on hover for all links */
 }
 
 li {
@@ -19,12 +31,14 @@ li {
 
 img {
     width: 100%;
+    display: block; /* Removes extra space below images */
 }
 
 /* Root Color Variables */
 :root {
     --container-color: #1a1e21;
     --second-color: #F85C70;
+    --second-color-rgb: 248, 92, 112; /* RGB values for #F85C70 */
     --text-color: #172317;
     --bg-color: #fff;
 }
@@ -38,162 +52,387 @@ img {
 /* Home Section */
 .home {
     width: 100%;
-    min-height: 440px;
+    min-height: 480px; /* Slightly increase height for visual appeal */
     display: grid;
     justify-content: center;
     align-items: center;
+    padding: 20px; /* Add some padding for smaller screens */
+    text-align: center; /* Ensure text is centered */
 }
 
 /* Background for page 1 */
 .home-1 {
-    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader.png") center/cover no-repeat;
 }
 
 /* Background for page 2 */
 .home-2 {
-    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader2.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader2.png") center/cover no-repeat;
 }
 
 /* More pages */
 .home-3 {
-    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader3.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader3.png") center/cover no-repeat;
 }
 
 /* More pages */
 .home-4 {
-    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader4.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader4.png") center/cover no-repeat;
 }
 
 /* More pages */
 .home-5 {
-    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader5.png") center/cover;
+    background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader5.png") center/cover no-repeat;
 }
-
 
 .home-text {
     color: var(--bg-color);
     text-align: center;
+    max-width: 800px; /* Limit width for better readability on large screens */
+    margin: 0 auto; /* Center the text block */
 }
 
 .home-title {
-    font-size: 3.5rem;
+    font-size: 3.8rem; /* Slightly larger for impact */
+    line-height: 1.1;
+    letter-spacing: -1px; /* Subtle negative letter-spacing for large titles */
+    margin-bottom: 15px; /* Space below title */
 }
 
 .home-subtitle {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Slightly larger for better prominence */
     font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Back to Portfolio Button */
+.home .btn {
+    margin-top: 30px; /* More space below the home text */
 }
 
 /* Case Study Content */
 .case-study-content {
-    padding: 30px;
+    padding: 40px; /* Increase padding inside the content box */
     background-color: #fff;  /* Ensure the background is white */
     border-radius: 10px;
-    box-shadow: none;  /* Remove any shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
 }
 
 .case-study-content h3 {
     color: var(--second-color);
-    font-size: 2rem;
+    font-size: 2.2rem; /* Slightly larger for headings */
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 30px; /* More space above headings */
+    margin-bottom: 15px; /* Adjust spacing */
+}
+
+.case-study-content h3:first-of-type {
+    margin-top: 0; /* No top margin for the very first heading in the content */
 }
 
 .case-study-content p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.05rem; /* A bit larger for main content */
+    line-height: 1.7; /* Slightly more line height for better readability */
+    margin-bottom: 20px; /* Add some bottom margin */
+}
+
+.image-placeholder {
+    margin-top: 25px; /* More space above images */
+    margin-bottom: 25px; /* More space below images */
 }
 
 .image-placeholder img {
     border-radius: 10px;
     max-width: 100%;
     height: auto;
-    margin-top: 20px;
+    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
 }
 
+.image-placeholder img:hover {
+    transform: scale(1.01); /* Slightly zoom on hover */
+}
+
+/* General Button Styling */
+.btn {
+    display: inline-block; /* Allows for padding and margins */
+    padding: 12px 25px; /* More padding */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-weight: 600; /* Bolder text */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.5px; /* Subtle letter spacing */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+.btn-danger {
+    background-color: var(--second-color);
+    color: var(--bg-color); /* White text */
+    border: 2px solid var(--second-color); /* Solid border */
+}
+
+.btn-danger:hover {
+    background-color: transparent; /* Transparent background on hover */
+    color: var(--second-color); /* Text color becomes --second-color */
+    transform: translateY(-2px); /* Slight lift effect */
+    border-color: var(--second-color); /* Ensure border color stays */
+}
 
 /* Sidebar for Related Case Studies */
-.sidebar {
-    margin-top: 20px;
+.col-lg-4 .sidebar {
+    position: sticky; /* Membuat sidebar lengket saat di-scroll */
+    top: 20px; /* Jarak dari atas saat sticky */
+    align-self: flex-start; /* Memastikan sticky content menempel di bagian atas */
+    padding: 30px; /* Padding lebih besar untuk konten sidebar */
+    background-color: var(--bg-color); /* Warna latar belakang */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Bayangan yang lebih menonjol */
+    margin-top: 0; /* Pastikan tidak ada margin top yang berlebihan */
 }
 
+/* Judul Sidebar */
 .sidebar h4 {
-    color: var(--second-color);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    color: var(--second-color); /* Warna merah dari variabel */
+    font-size: 1.8rem; /* Ukuran font lebih besar untuk judul */
+    margin-bottom: 25px; /* Jarak bawah lebih besar */
+    padding-bottom: 15px; /* Padding di bawah teks judul */
+    border-bottom: 2px solid rgba(var(--second-color-rgb), 0.2); /* Garis bawah yang lebih jelas */
+    position: relative;
+    text-align: left; /* Pastikan teks rata kiri */
 }
 
-.sidebar ul {
-    list-style-type: none;
-}
-
+/* Item-item dalam Related Case Studies */
 .sidebar .related-item {
-    display: flex;
-    margin-bottom: 15px;
+    display: flex; /* Menggunakan flexbox untuk layout gambar dan teks */
+    align-items: center; /* Rata tengah secara vertikal */
+    margin-bottom: 20px; /* Jarak antar item */
+    padding-bottom: 20px; /* Padding di bawah item */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Garis pemisah antar item */
+    transition: background-color 0.3s ease; /* Transisi saat hover */
+}
+
+.sidebar .related-item:last-child {
+    border-bottom: none; /* Hilangkan border pada item terakhir */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sidebar .related-item:hover {
+    background-color: rgba(0, 0, 0, 0.03); /* Latar belakang sedikit berubah saat hover */
+    border-radius: 5px; /* Sudut membulat saat hover */
+    padding: 10px; /* Menambahkan padding saat hover */
+    margin: -10px 0 10px -10px; /* Menyesuaikan margin saat hover agar padding berfungsi */
 }
 
 .sidebar-img {
-    margin-right: 15px;
+    flex-shrink: 0; /* Mencegah gambar menyusut */
+    width: 90px; /* Lebar gambar thumbnail yang konsisten */
+    height: 70px; /* Tinggi gambar thumbnail yang konsisten */
+    overflow: hidden; /* Pastikan gambar tidak keluar dari area */
+    border-radius: 8px; /* Sudut membulat untuk gambar */
+    margin-right: 15px; /* Jarak antara gambar dan teks */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar thumbnail */
+}
+
+.sidebar-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
 }
 
 .sidebar-info {
-    flex-grow: 1;
+    flex-grow: 1; /* Membiarkan teks mengisi sisa ruang */
 }
 
 .sidebar-info a {
-    font-size: 1.1rem;
-    color: var(--second-color);
-    font-weight: bold;
-    display: block;
+    font-size: 1.1rem; /* Ukuran font judul yang sedikit lebih kecil namun jelas */
+    font-weight: 600; /* Tebal */
+    color: var(--text-color); /* Warna teks utama */
+    display: block; /* Agar link mengambil seluruh lebar */
     margin-bottom: 5px;
+    transition: color 0.3s ease;
 }
 
 .sidebar-info a:hover {
-    color: var(--text-color);
-    text-decoration: underline;
+    color: var(--second-color); /* Berubah warna saat hover */
+    text-decoration: underline; /* Tambahkan underline saat hover */
 }
 
 .sidebar-info p {
-    font-size: 0.9rem;
-    color: #777;
+    font-size: 0.85rem; /* Ukuran font deskripsi yang lebih kecil */
+    color: #777; /* Warna abu-abu untuk deskripsi */
+    line-height: 1.4;
+    margin-bottom: 0; /* Hilangkan margin bawah default p */
+}
+
+/* Tag Cloud Section */
+.tag-cloud {
+    margin-top: 30px; /* Jarak dari Related Case Studies */
+    padding: 30px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tag-cloud h4 {
+    color: var(--second-color);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(var(--second-color-rgb), 0.2);
+    text-align: left;
+}
+
+.tag-cloud .tags {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan tag untuk melipat ke baris baru */
+    gap: 10px; /* Jarak antar tag */
+    justify-content: flex-start; /* Rata kiri */
+}
+
+.tag-cloud .tags a {
+    padding: 8px 15px; /* Padding untuk tag */
+    border-radius: 20px; /* Bentuk pil */
+    font-size: 0.9rem; /* Ukuran font tag */
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid var(--second-color); /* Border agar konsisten */
+    background-color: var(--second-color);
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.tag-cloud .tags a:hover {
+    background-color: var(--bg-color); /* Warna latar belakang terbalik saat hover */
+    color: var(--second-color);
+    transform: translateY(-3px); /* Efek angkat saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan saat hover */
+    text-decoration: none;
 }
 
 /* Footer Section */
 footer {
-    background-color: #111;
+    background-color: var(--container-color); /* Use a variable for consistency */
     color: white;
-    padding: 40px 0;
+    padding: 50px 0; /* More padding for a grander footer */
     text-align: center;
 }
 
 footer p {
     font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+footer h5 {
+    color: var(--second-color); /* Highlight footer headings */
+    margin-bottom: 15px;
+}
+
+footer ul {
+    padding-left: 0; /* Remove default list padding */
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li i {
+    margin-right: 8px;
+    color: var(--second-color); /* Color icons */
+}
+
+footer ul li a {
+    color: white;
+}
+
+footer ul li a:hover {
+    color: var(--second-color);
+}
+
+.social-icons {
+    margin-top: 20px;
 }
 
 .social-icons a {
-    font-size: 1.5rem;
-    margin-right: 15px;
+    font-size: 1.8rem; /* Larger social icons */
+    margin: 0 10px; /* Consistent spacing */
     color: white;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 .social-icons a:hover {
     color: var(--second-color);
+    transform: translateY(-3px); /* Subtle lift on hover */
 }
 
 /* Responsiveness */
+@media (max-width: 992px) { /* Added a breakpoint for tablets */
+    .home {
+        min-height: 400px;
+    }
+    .home-title {
+        font-size: 3.2rem;
+    }
+    .home-subtitle {
+        font-size: 1rem;
+    }
+    .case-study-content h3 {
+        font-size: 2rem;
+    }
+    /* Sidebar adjustments for tablets */
+    .col-lg-4 .sidebar {
+        position: static; /* Nonaktifkan sticky di tablet */
+        margin-top: 40px; /* Berikan jarak dari konten utama */
+        padding: 20px; /* Kurangi padding */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Bayangan lebih ringan */
+    }
+    .sidebar h4, .tag-cloud h4 {
+        font-size: 1.5rem; /* Ukuran judul lebih kecil */
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    .sidebar .related-item {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    .sidebar-img {
+        width: 70px;
+        height: 55px;
+        margin-right: 10px;
+    }
+    .sidebar-info a {
+        font-size: 1rem;
+    }
+    .sidebar-info p {
+        font-size: 0.8rem;
+    }
+    .tag-cloud .tags a {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
-        margin: 0 auto;
-        width: 95%;
+        width: 90%; /* Wider container on smaller screens */
     }
 
     .home {
-        min-height: 380px;
+        min-height: 350px; /* Slightly smaller height for small mobiles */
+        padding: 15px;
     }
 
     .home-title {
-        font-size: 3rem;
+        font-size: 2.8rem;
+    }
+
+    .home-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .case-study-content {
+        padding: 20px;
     }
 
     .case-study-content h3 {
@@ -201,20 +440,25 @@ footer p {
     }
 
     .case-study-content p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
-
+    /* Sidebar adjustments for smaller mobiles */
+    .sidebar {
+        margin-top: 30px; /* Adjust sidebar margin */
+    }
     .sidebar .related-item {
-        flex-direction: column;
+        flex-direction: column; /* Stack image and text on very small screens */
         align-items: center;
-        margin-bottom: 20px;
+        text-align: center;
     }
-
     .sidebar-img {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Space below image when stacked */
+        margin-right: 0;
     }
-
-    .sidebar-info {
+    .sidebar-info a {
+        text-align: center;
+    }
+    .sidebar-info p {
         text-align: center;
     }
 
@@ -225,54 +469,64 @@ footer p {
     footer p {
         font-size: 0.875rem;
     }
+
+    .social-icons a {
+        font-size: 1.6rem;
+        margin: 0 8px;
+    }
 }
 
 @media (max-width: 576px) {
+    .home {
+        min-height: 300px;
+        padding: 10px;
+    }
+    .home-title {
+        font-size: 2.2rem;
+    }
+    .home-subtitle {
+        font-size: 0.85rem;
+    }
+    .case-study-content h3 {
+        font-size: 1.6rem;
+        margin-top: 25px;
+    }
+    .case-study-content p {
+        font-size: 0.9rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .sidebar-img {
+        min-width: 60px;
+        max-width: 60px;
+        height: 45px;
+    }
+    .sidebar-info a {
+        font-size: 1rem;
+    }
+    .sidebar-info p {
+        font-size: 0.85rem;
+    }
     footer {
-        padding: 30px 20px;
+        padding: 30px 15px;
     }
 
     footer p {
         font-size: 0.8rem;
     }
-}
-
-/* Tag Cloud Section */
-.tag-cloud {
-    margin-top: 30px;
-}
-
-.tag-cloud h4 {
-    color: var(--second-color);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.tag-cloud .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tag-cloud .tags a {
-    padding: 6px 15px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: var(--second-color);
-    border-radius: 25px;
-    text-transform: capitalize;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.tag-cloud .tags a:hover {
-    background-color: #fff;
-    color: var(--second-color);
-    text-decoration: none;
-}
-
-@media (max-width: 768px) {
+    .tag-cloud h4 {
+        font-size: 1.3rem;
+    }
     .tag-cloud .tags a {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         padding: 5px 12px;
     }
+}
+
+/* Pastikan section secara keseluruhan memiliki padding yang baik */
+.section.my-5 {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }

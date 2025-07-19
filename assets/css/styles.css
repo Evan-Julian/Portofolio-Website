@@ -11440,13 +11440,31 @@ pre .code {
 }
 
 .navbar.affix .brand-txt {
-  bottom: 0;
-  opacity: 1;
+    bottom: 0;
+    opacity: 1;
+    visibility: visible; /* Pastikan teks terlihat */
+    transition: opacity 0.5s ease; /* Tambahkan transisi untuk efek halus */
 }
 
 .navbar.affix .brand-img {
-  top: -10px;
-  opacity: 0;
+    top: -10px;
+    opacity: 0;
+    visibility: hidden; /* Pastikan gambar tersembunyi sepenuhnya */
+    transition: opacity 0.5s ease; /* Tambahkan transisi untuk efek halus */
+}
+
+/* Pastikan navbar itu sendiri tidak terpengaruh opacity keseluruhan */
+.navbar.affix {
+    position: fixed; /* Memaksa navbar tetap pada posisi yang sama relatif terhadap viewport */
+    top: 0 !important; /* Menjamin navbar menempel di bagian paling atas viewport */
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 1 !important; /* Memastikan navbar tidak transparan */
+    visibility: visible !important; /* Memastikan navbar sepenuhnya terlihat */
+    z-index: 9999; /* Z-index yang sangat tinggi untuk memastikan di atas konten lain */
+    /* Anda bisa menambahkan transisi jika ingin efek halus saat berubah ke posisi fixed */
+    transition: all 0.3s ease-in-out;
 }
 
 .pagination .page-item {
@@ -11765,21 +11783,18 @@ footer .social-icons a:hover {
 /* Dalam assets/css/styles.css Anda */
 
 html {
-  height: 100%; /* Penting untuk flexbox layout */
-  /* Coba dengan overflow-y: scroll atau auto untuk memastikan scrollbar vertikal muncul */
-  /* Jika Anda yakin tidak ada overflow-x yang tidak diinginkan, hapus saja overflow-x: hidden; */
-  overflow-y: scroll; /* Atau auto, untuk memastikan scrollbar muncul jika konten lebih panjang */
-  scroll-behavior: smooth; /* Opsional: membuat scroll lebih halus */
+  height: 100%;
+  overflow-y: scroll; /* Anda menggunakan 'scroll' di sini */
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  padding: 0; /* Pastikan ini diset nol di sini juga */
+  padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Penting: body minimal setinggi viewport */
-  /* Hapus overflow-x: hidden; di sini jika Anda sudah menetapkannya di html */
-  /* body { ... properti lain ... } */
+  min-height: 100vh;
+  /* Anda mungkin punya duplikasi 'overflow-x: hidden;' dan 'overflow-y: auto;' di sini */
 }
 
 .content-wrap {
@@ -11814,8 +11829,16 @@ footer {
   font-weight: bold;
 }
 .portfolio-item {
-  /* Hapus atau komentari baris ini sementara untuk debugging */
-
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.portfolio-item.isotope-hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+.portfolio-item:not(.isotope-hidden) {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .portfolio-item:hover {
@@ -12093,7 +12116,7 @@ footer .social-icons a:hover {
   height: 4px;
   background-color: #F85C70; /* warna merah ala theme kamu */
   width: 0%;
-  z-index: 9999;
+  z-index: 10000;
   transition: width 0.2s ease-out;
 }
 
@@ -12122,5 +12145,3 @@ footer .social-icons a:hover {
   transform: scale(1.1);
   background-color: #d32f2f;
 }
-
-

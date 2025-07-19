@@ -11,858 +11,877 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 <link rel="stylesheet" href="assets/css/styles.css">
-<script src="script.js"></script>
 </head>
+
+<body>
+<div id="progress-bar"></div>
+<div class="content-wrap">
+</div>
+
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/isotope/3.0.6/isotope.pkgd.min.js"></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 <div id="progress-bar"></div>
 <div class="content-wrap">
-    <a href="components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600">
-        <i class="ti-shift-left-alt"></i> Components
-    </a>
-    
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <h4 class="header-subtitle">Hello, I am</h4>
-                <h1 class="header-title">Evan Julian</h1> <h6 class="header-mono">Frond end Designer | Developer | UI/UX Designer </h6>
-                <button class="btn btn-primary btn-rounded" onclick="window.open('./assets/Resume.pdf')">
-                    <i class="ti-printer pr-2"></i> Print Resume
-                </button>
+<a href="components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600">
+<i class="ti-shift-left-alt"></i> Components
+</a>
+
+<header class="header">
+<div class="container">
+<div class="header-content">
+    <h4 class="header-subtitle">Hello, I am</h4>
+    <h1 class="header-title">Evan Julian</h1> <h6 class="header-mono">Frond end Designer | Developer | UI/UX Designer </h6>
+    <button class="btn btn-primary btn-rounded" onclick="window.open('./assets/resume.pdf')">
+        <i class="ti-printer pr-2"></i> Print Resume
+    </button>
+</div>
+</div>
+</header>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+<div class="container">
+<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#resume" class="nav-link">Resume</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav brand">
+        <img src="assets/imgs/Profile Picture.jpeg" alt="" class="brand-img">
+        <li class="brand-txt">
+            <h5 class="brand-title">Evan Julian</h5>
+            <div class="brand-subtitle">Frond end Designer | Developer | UI/UX Designer</div>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+            <a href="#blog" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item last-item">
+            <a href="#contact" class="nav-link">Contact</a>
+        </li>
+    </ul>
+</div>
+</div>
+</nav>
+
+<div class="container-fluid">
+<div id="about" class="row about-section">
+<div class="col-lg-4 about-card">
+    <h3 class="font-weight-light">Who am I ?</h3>
+    <span class="line mb-5"></span>
+    <h5 class="mb-3">A Web Designer / UI/UX Designer</h5>
+    <p class="mt-20">I’m Evan, an Information Systems student at Multimedia Nusantara University with a
+        strong enthusiasm for UI/UX design, coding, and graphic design. With a background in Information
+        Systems, I am dedicated to creating user-centered digital experiences and have gained a broad range
+        of hands-on experience in the field.</p>
+    <div class="about-buttons-group">
+        <button class="btn btn-primary btn-rounded mr-2 mb-2" onclick="window.open('./assets/CV.pdf')">
+            <i class="ti-download pr-2"></i> Download CV
+        </button>
+        <button class="btn btn-custom btn-rounded mb-2" onclick="window.location.href='https://wa.me/6281387684093'">
+            <i class="fab fa-whatsapp pr-2"></i> Contact Me
+        </button>
+    </div>
+</div>
+<div class="col-lg-4 about-card">
+    <h3 class="font-weight-light">Personal Info</h3>
+    <span class="line mb-5"></span>
+    <ul class="mt40 info list-unstyled">
+        <li><span>Email</span> : evanpriyasa.id@gmail.com</li>
+        <li><span>Phone</span> : +62-813-8768-4093</li>
+    </ul>
+    <ul class="social-icons pt-3">
+        <li class="social-item"><a class="social-link" href="mailto:evanpriyasa.id@gmail.com"><i
+                        class="ti-google" aria-hidden="true"></i></a></li>
+        <li class="social-item"><a class="social-link" href="https://www.linkedin.com/in/evanjulianp/"><i
+                        class="ti-linkedin" aria-hidden="true"></i></a></li>
+        <li class="social-item"><a class="social-link" href="https://www.instagram.com/m.panjull/"><i
+                        class="ti-instagram" aria-hidden="true"></i></a></li>
+        <li class="social-item"><a class="social-link" href="https://github.com/Evan-Julian"><i
+                        class="ti-github" aria-hidden="true"></i></a></li>
+    </ul>
+</div>
+<div class="col-lg-4 about-card">
+    <h3 class="font-weight-light">My Expertise</h3>
+    <span class="line mb-5"></span>
+    <div class="row">
+        <div class="col-1 text-danger pt-1"><i class="ti-ruler-pencil icon-lg"></i></div>
+        <div class="col-10 ml-auto mr-3">
+            <h6>UI/UX Designer</h6>
+            <p class="subtitle">Designing intuitive and visually appealing interfaces that enhance user
+                experiences.</p>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1 text-danger pt-1"><i class="ti-desktop icon-lg"></i></div>
+        <div class="col-10 ml-auto mr-3">
+            <h6>Website Developer</h6>
+            <p class="subtitle">Building responsive and high-performance websites tailored to business
+                needs.</p>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1 text-danger pt-1"><i class="ti-bar-chart icon-lg"></i></div>
+        <div class="col-10 ml-auto mr-3">
+            <h6>Data Analytics</h6>
+            <p class="subtitle">Transforming data into actionable insights for informed decision-making.</p>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1 text-danger pt-1"><i class="ti-pie-chart icon-lg"></i></div>
+        <div class="col-10 ml-auto mr-3">
+            <h6>Data Visualization</h6>
+            <p class="subtitle">Crafting clear and effective visual representations of complex data sets.
+            </p>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1 text-danger pt-1"><i class="ti-palette icon-lg"></i></div>
+        <div class="col-10 ml-auto mr-3">
+            <h6>Graphic Design</h6>
+            <p class="subtitle">Creating visually captivating designs for digital and print media.</p>
+            <hr>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<section class="section" id="resume">
+<div class="container">
+<h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+<div class="row">
+    <div class="col-md-6 col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>Experience</h4>
+                <span class="line"></span>
+            </div>
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                    <img src="assets/imgs/hievent_logo.jpeg" alt="HiEvents Logo" class="me-3"
+                        style="width: 100px; height: 100px;">
+                    <div>
+                        <h6 class="title text-danger">Jan 2024 - Jul 2025</h6>
+                        <h5 class="company-name">HiEvents</h5>
+                        <p>Front End Developer</p>
+                    </div>
+                </div>
+                <p class="subtitle">
+                    Crafted responsive, user-friendly interfaces across various projects with a focus on functionality and visual appeal. Collaborated with clients to turn ideas into intuitive designs. Optimized performance, accessibility, and user experience using modern web technologies.
+                </p>
+                <hr>
+                <div class="d-flex align-items-center mb-4">
+                    <img src="assets/imgs/hievent_logo.jpeg" alt="HiEvents Logo" class="me-3"
+                        style="width: 100px; height: 100px;">
+                    <div>
+                        <h6 class="title text-danger">Oct 2024 - Jan 2025</h6>
+                        <h5 class="company-name">HiEvents</h5>
+                        <p>UI/UX Designer</p>
+                    </div>
+                </div>
+                <p class="subtitle">
+                    Led the creative direction and design of user interfaces for a variety of events,
+                    ensuring visually impactful and user-centered designs. Enhanced participant engagement
+                    and improved client objectives through intuitive designs.
+                </p>
+                <hr>
+                <div class="d-flex align-items-center mb-4">
+                    <img src="assets/imgs/kawanstudy_logo.jpeg" alt="KawanStudy Logo" class="me-3"
+                        style="width: 100px; height: 100px;">
+                    <div>
+                        <h6 class="title text-danger">Sep 2024 - Jul 2025</h6>
+                        <h5 class="company-name">KawanStudy</h5>
+                        <p>UI/UX Designer</p>
+                    </div>
+                </div>
+                <p class="subtitle">
+                    Designed intuitive digital interfaces for educational projects. Conducted user research
+                    and usability testing to refine designs, improving engagement and ensuring client
+                    satisfaction.
+                </p>
             </div>
         </div>
-    </header>
-    
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
-        <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resume" class="nav-link">Resume</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav brand">
-                    <img src="assets/imgs/Profile Picture.jpeg" alt="" class="brand-img">
-                    <li class="brand-txt">
-                        <h5 class="brand-title">Evan Julian</h5>
-                        <div class="brand-subtitle">Frond end Designer | Developer | UI/UX Designer</div>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#portfolio" class="nav-link">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#blog" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item last-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>Education</h4>
+                <span class="line"></span>
+            </div>
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                    <img src="assets/imgs/UMN.jpeg" alt="University Multimedia Nusantara Logo" class="me-3"
+                        style="width: 100px; height: 100px;">
+                    <div>
+                        <h6 class="title text-danger">2022 - Present</h6>
+                        <h5 class="University">University Multimedia Nusantara</h5>
+                        <p>Bachelor's degree, Information System</p>
+                    </div>
+                </div>
+                <p class="subtitle">Grade: 3.56/4.00</p>
             </div>
         </div>
-    </nav>
-    <div class="container-fluid">
-        <div id="about" class="row about-section">
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Who am I ?</h3>
-                <span class="line mb-5"></span>
-                <h5 class="mb-3">A Web Designer / UI/UX Designer</h5>
-                <p class="mt-20">I’m Evan, an Information Systems student at Multimedia Nusantara University with a
-                    strong enthusiasm for UI/UX design, coding, and graphic design. With a background in Information
-                    Systems, I am dedicated to creating user-centered digital experiences and have gained a broad range
-                    of hands-on experience in the field.</p>
-                <div class="about-buttons-group">
-                    <button class="btn btn-primary btn-rounded mr-2 mb-2" onclick="window.open('./assets/CV.pdf')">
-                        <i class="ti-download pr-2"></i> Download CV
-                    </button>
-                    <button class="btn btn-custom btn-rounded mb-2" onclick="window.location.href='https://wa.me/6281387684093'">
-                        <i class="fab fa-whatsapp pr-2"></i> Contact Me
-                    </button>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>Skills</h4>
+                <span class="line"></span>
+            </div>
+            <div class="card-body pb-2">
+                <h6>HTML &amp; CSS</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 97%;"></div>
+                </div>
+                <h6>JavaScript</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;"></div>
+                </div>
+                <h6>PHP</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;"></div>
+                </div>
+                <h6>SQL</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;"></div>
+                </div>
+                <h6>Python</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;"></div>
+                </div>
+                <h6>Data Analytics</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;"></div>
+                </div>
+                <h6>Data Visualization</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;"></div>
+                </div>
+                <h6>UI/UX Design</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;"></div>
                 </div>
             </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Personal Info</h3>
-                <span class="line mb-5"></span>
-                <ul class="mt40 info list-unstyled">
-                    <li><span>Email</span> : evanpriyasa.id@gmail.com</li>
-                    <li><span>Phone</span> : +62-813-8768-4093</li>
-                </ul>
-                <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link" href="mailto:evanpriyasa.id@gmail.com"><i
-                                    class="ti-google" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://www.linkedin.com/in/evanjulianp/"><i
-                                    class="ti-linkedin" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://www.instagram.com/m.panjull/"><i
-                                    class="ti-instagram" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://github.com/Evan-Julian"><i
-                                    class="ti-github" aria-hidden="true"></i></a></li>
-                </ul>
+        </div>
+        <div class="card mt-4">
+            <div class="card-header">
+                <h4>Languages</h4>
+                <span class="line"></span>
             </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">My Expertise</h3>
-                <span class="line mb-5"></span>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-ruler-pencil icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>UI/UX Designer</h6>
-                        <p class="subtitle">Designing intuitive and visually appealing interfaces that enhance user
-                            experiences.</p>
-                        <hr>
+            <div class="card-body pb-2">
+                <h6>Indonesia</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;"></div>
+                </div>
+                <h6>English</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container my-5">
+<h2 class="mb-5 text-center"><span class="text-danger">My</span> Certificates</h2>
+<div class="portfolio">
+    <div class="portfolio-container row justify-content-center">
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="portfolio-item shadow-sm rounded">
+                <img src="assets/imgs/Certificates 1.jpg" class="img-fluid rounded-top"
+                    alt="Meta Front-End Developer Certificate">
+                <div class="content-holder p-3 text-center">
+                    <a href="assets/imgs/Certificates 1.jpg" class="btn btn-primary btn-sm mt-3"
+                        target="_blank">View Certificate</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="portfolio-item shadow-sm rounded">
+                <img src="assets/imgs/Certificates 2.jpg" class="img-fluid rounded-top"
+                    alt="Meta Front-End Developer Certificate">
+                <div class="content-holder p-3 text-center">
+                    <a href="assets/imgs/Certificates 2.jpg" class="btn btn-primary btn-sm mt-3"
+                        target="_blank">View Certificate</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="portfolio-item shadow-sm rounded">
+                <img src="assets/imgs/Certificates 3.jpg" class="img-fluid rounded-top"
+                    alt="Meta Front-End Developer Certificate">
+                <div class="content-holder p-3 text-center">
+                    <a href="assets/imgs/Certificates 3.jpg" class="btn btn-primary btn-sm mt-3"
+                        target="_blank">View Certificate</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="portfolio-item shadow-sm rounded">
+                <img src="assets/imgs/Certificates 4.jpg" class="img-fluid rounded-top"
+                    alt="Meta Front-End Developer Certificate">
+                <div class="content-holder p-3 text-center">
+                    <a href="assets/imgs/Certificates 4.jpg" class="btn btn-primary btn-sm mt-3"
+                        target="_blank">View Certificate</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="portfolio-item shadow-sm rounded">
+                <img src="assets/imgs/Certificates 5.jpg" class="img-fluid rounded-top"
+                    alt="Data Analytics Dashboard Design">
+                <div class="content-holder p-3 text-center">
+                    <a href="assets/imgs/Certificates 5.jpg" class="btn btn-primary btn-sm mt-3"
+                        target="_blank">View Certificate</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="portfolio-item shadow-sm rounded">
+                <img src="assets/imgs/Certificates 6.jpg" class="img-fluid rounded-top"
+                    alt="Meta Front-End Developer Certificate">
+                <div class="content-holder p-3 text-center">
+                    <a href="assets/imgs/Certificates 6.jpg" class="btn btn-primary btn-sm mt-3"
+                        target="_blank">View Certificate</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+</section>
+
+<section class="section bg-dark text-center">
+<div class="container">
+<div class="row text-center">
+    <div class="col-md-6 col-lg-3">
+        <div class="row ">
+            <div class="col-5 text-right text-light border-right py-3">
+                <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
+            </div>
+            <div class="col-7 text-left py-3">
+                <h1 class="text-danger font-weight-bold font40 counter" data-target="1200">0</h1>
+                <p class="text-light mb-1">Hours Worked</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="row">
+            <div class="col-5 text-right text-light border-right py-3">
+                <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
+            </div>
+            <div class="col-7 text-left py-3">
+                <h1 class="text-danger font-weight-bold font40 counter" data-target="550">0</h1>
+                <p class="text-light mb-1">Project Finished</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="row">
+            <div class="col-5 text-right text-light border-right py-3">
+                <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
+            </div>
+            <div class="col-7 text-left py-3">
+                <h1 class="text-danger font-weight-bold font40 counter" data-target="100">0</h1>
+                <p class="text-light mb-1">Happy Clients</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="row">
+            <div class="col-5 text-right text-light border-right py-3">
+                <div class="m-auto"><i class="ti-search icon-xl"></i></div>
+            </div>
+            <div class="col-7 text-left py-3">
+                <h1 class="text-danger font-weight-bold font40 counter" data-target="400">0</h1>
+                <p class="text-light mb-1">Hours of Research</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<section class="section" id="service">
+<div class="container">
+<h2 class="mb-5 pb-4"><span class="text-danger">My</span> Services</h2>
+<div class="row">
+    <div class="col-md-4 col-sm-6">
+        <div class="card mb-5">
+            <div class="card-header has-icon">
+                <i class="ti-ruler-pencil text-danger" aria-hidden="true"></i>
+            </div>
+            <div class="card-body px-4 py-3">
+                <h5 class="mb-3 card-title text-dark">User Interface Design</h5>
+                <p class="subtitle">Designing intuitive user interfaces that enhance engagement and deliver
+                    seamless user experiences.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <div class="card mb-5">
+            <div class="card-header has-icon">
+                <i class="ti-comments text-danger" aria-hidden="true"></i>
+            </div>
+            <div class="card-body px-4 py-3">
+                <h5 class="mb-3 card-title text-dark">Design Consult</h5>
+                <p class="subtitle">Providing strategic advice to refine designs and ensure alignment with
+                    project objectives and goals.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <div class="card mb-5">
+            <div class="card-header has-icon">
+                <i class="ti-desktop text-danger" aria-hidden="true"></i>
+            </div>
+            <div class="card-body px-4 py-3">
+                <h5 class="mb-3 card-title text-dark">Web Interface Design</h5>
+                <p class="subtitle">Creating responsive web designs that align with branding and improve
+                    user satisfaction effectively.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <div class="card mb-5">
+            <div class="card-header has-icon">
+                <i class="ti-bar-chart text-danger" aria-hidden="true"></i>
+            </div>
+            <div class="card-body px-4 py-3">
+                <h5 class="mb-3 card-title text-dark">Data Analysis</h5>
+                <p class="subtitle">Transforming data into insights to enable informed decisions and enhance
+                    organizational strategies.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <div class="card mb-5">
+            <div class="card-header has-icon">
+                <i class="ti-palette text-danger" aria-hidden="true"></i>
+            </div>
+            <div class="card-body px-4 py-3">
+                <h5 class="mb-3 card-title text-dark">Graphic Design</h5>
+                <p class="subtitle">Developing compelling visuals for digital and print media that
+                    effectively communicate ideas clearly.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <div class="card mb-5">
+            <div class="card-header has-icon">
+                <i class="ti-pencil-alt text-danger" aria-hidden="true"></i>
+            </div>
+            <div class="card-body px-4 py-3">
+                <h5 class="mb-3 card-title text-dark">Prototyping</h5>
+                <p class="subtitle">Building interactive prototypes to test ideas and refine user
+                    experiences for final implementations.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="section bg-custom-gray" id="portfolio">
+<div class="container">
+    <h2 class="mb-5 text-center"><span class="text-danger">My</span> Portofolio</h2>
+    <div class="portfolio">
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-4">
+    <button class="btn btn-outline-danger filter-btn active" data-filter="*">All</button>
+    <button class="btn btn-outline-danger filter-btn" data-filter=".mobile">Mobile</button>
+    <button class="btn btn-outline-danger filter-btn" data-filter=".website">Website</button>
+    <button class="btn btn-outline-danger filter-btn" data-filter=".data-analytics">Data Analytics</button>
+    </div>
+
+
+<!-- Portfolio Items -->
+        <div class="portfolio-container row">
+            <!-- Project 1 (Mobile) -->
+            <div class="col-md-6 col-lg-4 mobile">
+                <div class="portfolio-item">
+                    <img src="assets/imgs/project-1.png" class="img-fluid" alt="Mobile App UI Design">
+                    <div class="content-holder">
+                        <a class="img-popup" href="assets/imgs/project-1.png"></a>
+                        <div class="text-holder">
+                            <h6 class="title">EduLearn</h6>
+                            <p class="subtitle">EduLearn: Empowering Students to Overcome Financial and
+                                Academic Challenges.</p>
+                            <a href="case-study1.html" class="btn btn-primary btn-sm mt-3"
+                                target="_blank">View Case Study</a> <!-- Update with actual URL -->
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-desktop icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Website Developer</h6>
-                        <p class="subtitle">Building responsive and high-performance websites tailored to business
-                            needs.</p>
-                        <hr>
+            </div>
+            <!-- Project 2 (Mobile) -->
+            <div class="col-md-6 col-lg-4 mobile">
+                <div class="portfolio-item">
+                    <img src="assets/imgs/project-2.png" class="img-fluid"
+                        alt="Mobile App Dashboard Design">
+                    <div class="content-holder">
+                        <a class="img-popup" href="assets/imgs/project-2.png"></a>
+                        <div class="text-holder">
+                            <h6 class="title">Medicalife</h6>
+                            <p class="subtitle">Medicalife: Transforming Healthcare Accessibility and
+                                Hospital Efficiency through Innovation</p>
+                            <a href="case-study2.html" class="btn btn-primary btn-sm mt-3"
+                                target="_blank">View Case Study</a> <!-- Update with actual URL -->
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-bar-chart icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Data Analytics</h6>
-                        <p class="subtitle">Transforming data into actionable insights for informed decision-making.</p>
-                        <hr>
+            </div>
+            <!-- Project 3 (Website) -->
+            <div class="col-md-6 col-lg-4 website">
+                <div class="portfolio-item">
+                    <img src="assets/imgs/project-3.png" class="img-fluid"
+                        alt="Advertising Campaign Design">
+                    <div class="content-holder">
+                        <a class="img-popup" href="assets/imgs/project-3.png"></a>
+                        <div class="text-holder">
+                            <h6 class="title">SmartStudy</h6>
+                            <p class="subtitle">SmartStudy: Revolutionizing E-Learning for Modern
+                                Students.</p>
+                            <a href="case-study3.html" class="btn btn-primary btn-sm mt-3"
+                                target="_blank">View Case Study</a> <!-- Update with actual URL -->
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-pie-chart icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Data Visualization</h6>
-                        <p class="subtitle">Crafting clear and effective visual representations of complex data sets.
-                        </p>
-                        <hr>
+            </div>
+            <!-- Project 4 (Data Analytics) -->
+            <div class="col-md-6 col-lg-4 data-analytics">
+                <div class="portfolio-item">
+                    <img src="assets/imgs/project-4.png" class="img-fluid"
+                        alt="Website Design for E-commerce">
+                    <div class="content-holder">
+                        <a class="img-popup" href="assets/imgs/project-4.png"></a>
+                        <div class="text-holder">
+                            <h6 class="title">Tableau Dashboard</h6>
+                            <p class="subtitle">Understanding Consumer Behavior: Insights from G20
+                                Countries in Europe Using Tableau</p>
+                            <a href="case-study4.html" class="btn btn-primary btn-sm mt-3"
+                                target="_blank">View Case Study</a> <!-- Update with actual URL -->
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-palette icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Graphic Design</h6>
-                        <p class="subtitle">Creating visually captivating designs for digital and print media.</p>
-                        <hr>
+            </div>
+            <!-- Project 5 (Data Analytics) -->
+            <div class="col-md-6 col-lg-4 data-analytics">
+                <div class="portfolio-item">
+                    <img src="assets/imgs/project-5.png" class="img-fluid"
+                        alt="Data Analytics Dashboard Design">
+                    <div class="content-holder">
+                        <a class="img-popup" href="assets/imgs/project-5.png"></a>
+                        <div class="text-holder">
+                            <h6 class="title">SAS Visual Analytics</h6>
+                            <p class="subtitle">An innovative approach to data visualization for better
+                                decision-making</p>
+                            <a href="case-study5.html" class="btn btn-primary btn-sm mt-3"
+                                target="_blank">View Case Study</a> <!-- Update with actual URL -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <section class="section" id="resume">
-        <div class="container">
-            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Experience</h4>
-                            <span class="line"></span>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-4">
-                                <img src="assets/imgs/hievent_logo.jpeg" alt="HiEvents Logo" class="me-3"
-                                    style="width: 100px; height: 100px;">
-                                <div>
-                                    <h6 class="title text-danger">Jan 2024 - Jul 2025</h6>
-                                    <h5 class="company-name">HiEvents</h5>
-                                    <p>Front End Developer</p>
-                                </div>
-                            </div>
-                            <p class="subtitle">
-                                Crafted responsive, user-friendly interfaces across various projects with a focus on functionality and visual appeal. Collaborated with clients to turn ideas into intuitive designs. Optimized performance, accessibility, and user experience using modern web technologies.
-                            </p>
-                            <hr>
-                            <div class="d-flex align-items-center mb-4">
-                                <img src="assets/imgs/hievent_logo.jpeg" alt="HiEvents Logo" class="me-3"
-                                    style="width: 100px; height: 100px;">
-                                <div>
-                                    <h6 class="title text-danger">Oct 2024 - Jan 2025</h6>
-                                    <h5 class="company-name">HiEvents</h5>
-                                    <p>UI/UX Designer</p>
-                                </div>
-                            </div>
-                            <p class="subtitle">
-                                Led the creative direction and design of user interfaces for a variety of events,
-                                ensuring visually impactful and user-centered designs. Enhanced participant engagement
-                                and improved client objectives through intuitive designs.
-                            </p>
-                            <hr>
-                            <div class="d-flex align-items-center mb-4">
-                                <img src="assets/imgs/kawanstudy_logo.jpeg" alt="KawanStudy Logo" class="me-3"
-                                    style="width: 100px; height: 100px;">
-                                <div>
-                                    <h6 class="title text-danger">Sep 2024 - Jul 2025</h6>
-                                    <h5 class="company-name">KawanStudy</h5>
-                                    <p>UI/UX Designer</p>
-                                </div>
-                            </div>
-                            <p class="subtitle">
-                                Designed intuitive digital interfaces for educational projects. Conducted user research
-                                and usability testing to refine designs, improving engagement and ensuring client
-                                satisfaction.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Education</h4>
-                            <span class="line"></span>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-4">
-                                <img src="assets/imgs/UMN.jpeg" alt="University Multimedia Nusantara Logo" class="me-3"
-                                    style="width: 100px; height: 100px;">
-                                <div>
-                                    <h6 class="title text-danger">2022 - Present</h6>
-                                    <h5 class="University">University Multimedia Nusantara</h5>
-                                    <p>Bachelor's degree, Information System</p>
-                                </div>
-                            </div>
-                            <p class="subtitle">Grade: 3.56/4.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Skills</h4>
-                            <span class="line"></span>
-                        </div>
-                        <div class="card-body pb-2">
-                            <h6>HTML &amp; CSS</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 97%;"></div>
-                            </div>
-                            <h6>JavaScript</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;"></div>
-                            </div>
-                            <h6>PHP</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;"></div>
-                            </div>
-                            <h6>SQL</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;"></div>
-                            </div>
-                            <h6>Python</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;"></div>
-                            </div>
-                            <h6>Data Analytics</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;"></div>
-                            </div>
-                            <h6>Data Visualization</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;"></div>
-                            </div>
-                            <h6>UI/UX Design</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-4">
-                        <div class="card-header">
-                            <h4>Languages</h4>
-                            <span class="line"></span>
-                        </div>
-                        <div class="card-body pb-2">
-                            <h6>Indonesia</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;"></div>
-                            </div>
-                            <h6>English</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container my-5">
-            <h2 class="mb-5 text-center"><span class="text-danger">My</span> Certificates</h2>
-            <div class="portfolio">
-                <div class="portfolio-container row justify-content-center">
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="portfolio-item shadow-sm rounded">
-                            <img src="assets/imgs/Certificates 1.jpg" class="img-fluid rounded-top"
-                                alt="Meta Front-End Developer Certificate">
-                            <div class="content-holder p-3 text-center">
-                                <a href="assets/imgs/Certificates 1.jpg" class="btn btn-primary btn-sm mt-3"
-                                    target="_blank">View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="portfolio-item shadow-sm rounded">
-                            <img src="assets/imgs/Certificates 2.jpg" class="img-fluid rounded-top"
-                                alt="Meta Front-End Developer Certificate">
-                            <div class="content-holder p-3 text-center">
-                                <a href="assets/imgs/Certificates 2.jpg" class="btn btn-primary btn-sm mt-3"
-                                    target="_blank">View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="portfolio-item shadow-sm rounded">
-                            <img src="assets/imgs/Certificates 3.jpg" class="img-fluid rounded-top"
-                                alt="Meta Front-End Developer Certificate">
-                            <div class="content-holder p-3 text-center">
-                                <a href="assets/imgs/Certificates 3.jpg" class="btn btn-primary btn-sm mt-3"
-                                    target="_blank">View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="portfolio-item shadow-sm rounded">
-                            <img src="assets/imgs/Certificates 4.jpg" class="img-fluid rounded-top"
-                                alt="Meta Front-End Developer Certificate">
-                            <div class="content-holder p-3 text-center">
-                                <a href="assets/imgs/Certificates 4.jpg" class="btn btn-primary btn-sm mt-3"
-                                    target="_blank">View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="portfolio-item shadow-sm rounded">
-                            <img src="assets/imgs/Certificates 5.jpg" class="img-fluid rounded-top"
-                                alt="Data Analytics Dashboard Design">
-                            <div class="content-holder p-3 text-center">
-                                <a href="assets/imgs/Certificates 5.jpg" class="btn btn-primary btn-sm mt-3"
-                                    target="_blank">View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="portfolio-item shadow-sm rounded">
-                            <img src="assets/imgs/Certificates 6.jpg" class="img-fluid rounded-top"
-                                alt="Meta Front-End Developer Certificate">
-                            <div class="content-holder p-3 text-center">
-                                <a href="assets/imgs/Certificates 6.jpg" class="btn btn-primary btn-sm mt-3"
-                                    target="_blank">View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="section bg-dark text-center">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-6 col-lg-3">
-                    <div class="row ">
-                        <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
-                        </div>
-                        <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40 counter" data-target="1200">0</h1>
-                            <p class="text-light mb-1">Hours Worked</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="row">
-                        <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
-                        </div>
-                        <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40 counter" data-target="550">0</h1>
-                            <p class="text-light mb-1">Project Finished</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="row">
-                        <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
-                        </div>
-                        <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40 counter" data-target="100">0</h1>
-                            <p class="text-light mb-1">Happy Clients</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="row">
-                        <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="ti-search icon-xl"></i></div>
-                        </div>
-                        <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40 counter" data-target="400">0</h1>
-                            <p class="text-light mb-1">Hours of Research</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="service">
-        <div class="container">
-            <h2 class="mb-5 pb-4"><span class="text-danger">My</span> Services</h2>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-ruler-pencil text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">User Interface Design</h5>
-                            <p class="subtitle">Designing intuitive user interfaces that enhance engagement and deliver
-                                seamless user experiences.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-comments text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Design Consult</h5>
-                            <p class="subtitle">Providing strategic advice to refine designs and ensure alignment with
-                                project objectives and goals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-desktop text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Web Interface Design</h5>
-                            <p class="subtitle">Creating responsive web designs that align with branding and improve
-                                user satisfaction effectively.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-bar-chart text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Data Analysis</h5>
-                            <p class="subtitle">Transforming data into insights to enable informed decisions and enhance
-                                organizational strategies.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-palette text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Graphic Design</h5>
-                            <p class="subtitle">Developing compelling visuals for digital and print media that
-                                effectively communicate ideas clearly.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-pencil-alt text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Prototyping</h5>
-                            <p class="subtitle">Building interactive prototypes to test ideas and refine user
-                                experiences for final implementations.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    
-        <!-- Portfolio Section -->
-        <section class="section bg-custom-gray" id="portfolio">
-            <div class="container">
-                <h2 class="mb-5 text-center"><span class="text-danger">My</span> Portofolio</h2>
-                <div class="portfolio">
-
-                <!-- Filter Buttons -->
-                <div class="text-center mb-4">
-                <button class="btn btn-outline-danger filter-btn active" data-filter="*">All</button>
-                <button class="btn btn-outline-danger filter-btn" data-filter=".mobile">Mobile</button>
-                <button class="btn btn-outline-danger filter-btn" data-filter=".website">Website</button>
-                <button class="btn btn-outline-danger filter-btn" data-filter=".data-analytics">Data Analytics</button>
-                </div>
-
-
-            <!-- Portfolio Items -->
-                    <div class="portfolio-container row">
-                        <!-- Project 1 (Mobile) -->
-                        <div class="col-md-6 col-lg-4 mobile">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/project-1.png" class="img-fluid" alt="Mobile App UI Design">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/project-1.png"></a>
-                                    <div class="text-holder">
-                                        <h6 class="title">EduLearn</h6>
-                                        <p class="subtitle">EduLearn: Empowering Students to Overcome Financial and
-                                            Academic Challenges.</p>
-                                        <a href="case-study1.html" class="btn btn-primary btn-sm mt-3"
-                                            target="_blank">View Case Study</a> <!-- Update with actual URL -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project 2 (Mobile) -->
-                        <div class="col-md-6 col-lg-4 mobile">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/project-2.png" class="img-fluid"
-                                    alt="Mobile App Dashboard Design">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/project-2.png"></a>
-                                    <div class="text-holder">
-                                        <h6 class="title">Medicalife</h6>
-                                        <p class="subtitle">Medicalife: Transforming Healthcare Accessibility and
-                                            Hospital Efficiency through Innovation</p>
-                                        <a href="case-study2.html" class="btn btn-primary btn-sm mt-3"
-                                            target="_blank">View Case Study</a> <!-- Update with actual URL -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project 3 (Website) -->
-                        <div class="col-md-6 col-lg-4 website">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/project-3.png" class="img-fluid"
-                                    alt="Advertising Campaign Design">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/project-3.png"></a>
-                                    <div class="text-holder">
-                                        <h6 class="title">SmartStudy</h6>
-                                        <p class="subtitle">SmartStudy: Revolutionizing E-Learning for Modern
-                                            Students.</p>
-                                        <a href="case-study3.html" class="btn btn-primary btn-sm mt-3"
-                                            target="_blank">View Case Study</a> <!-- Update with actual URL -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project 4 (Data Analytics) -->
-                        <div class="col-md-6 col-lg-4 data-analytics">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/project-4.png" class="img-fluid"
-                                    alt="Website Design for E-commerce">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/project-4.png"></a>
-                                    <div class="text-holder">
-                                        <h6 class="title">Tableau Dashboard</h6>
-                                        <p class="subtitle">Understanding Consumer Behavior: Insights from G20
-                                            Countries in Europe Using Tableau</p>
-                                        <a href="case-study4.html" class="btn btn-primary btn-sm mt-3"
-                                            target="_blank">View Case Study</a> <!-- Update with actual URL -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project 5 (Data Analytics) -->
-                        <div class="col-md-6 col-lg-4 data-analytics">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/project-5.png" class="img-fluid"
-                                    alt="Data Analytics Dashboard Design">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/project-5.png"></a>
-                                    <div class="text-holder">
-                                        <h6 class="title">SAS Visual Analytics</h6>
-                                        <p class="subtitle">An innovative approach to data visualization for better
-                                            decision-making</p>
-                                        <a href="case-study5.html" class="btn btn-primary btn-sm mt-3"
-                                            target="_blank">View Case Study</a> <!-- Update with actual URL -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+</div>
+</section>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const items = document.querySelectorAll(".portfolio-container .col-md-6");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const items = document.querySelectorAll(".portfolio-container .col-md-6");
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            // Remove active class from all
-            filterButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
+filterButtons.forEach(btn => {
+btn.addEventListener("click", () => {
+// Remove active class from all
+filterButtons.forEach(b => b.classList.remove("active"));
+btn.classList.add("active");
 
-            const filterValue = btn.getAttribute("data-filter");
+const filterValue = btn.getAttribute("data-filter");
 
-            items.forEach(item => {
-                if (filterValue === "*" || item.classList.contains(filterValue.slice(1))) {
-                    item.style.display = "block";
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        });
-    });
+items.forEach(item => {
+    if (filterValue === "*" || item.classList.contains(filterValue.slice(1))) {
+        item.style.display = "block";
+    } else {
+        item.style.display = "none";
+    }
+});
+});
+});
 });
 </script>
 
 
-    </div> <!-- End portfolio container -->
+</div> 
 
-    <section class="section" id="blog">
-        <div class="container">
-            <h2 class="mb-5">Latest <span class="text-danger">News</span></h2>
-            <div class="row">
-                <div class="blog-card">
-                    <div class="img-holder">
-                        <img src="assets/imgs/blog1.png" alt="UI/UX Design Trends 2025">
-                    </div>
-                    <div class="content-holder">
-                        <h6 class="title">Top UI/UX Design Trends in 2025</h6>
-                        <p class="post-details">
-                            <a href="#">By: Evan Julian</a>
-                            <a href="#"><i class="ti-heart text-danger"></i> 234</a>
-                            <a href="#"><i class="ti-comment"></i> 123</a>
-                        </p>
-                        <p>Discover the latest trends in UI/UX design for 2025, from dark mode enhancements to
-                            minimalist user interfaces. Learn how these trends are shaping the future of digital
-                            design.</p>
-                        <p><b>Stay ahead in design innovation!</b></p>
-                        <p>Explore tips and strategies for creating engaging user experiences that are both
-                            functional and visually appealing. Embrace the evolution of design trends in this
-                            rapidly changing field.</p>
-                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
-                    </div>
-                </div>
+<!-- End portfolio container -->
 
-                <div class="blog-card">
-                    <div class="img-holder">
-                        <img src="assets/imgs/blog2.png" alt="Boosting Website Performance">
-                    </div>
-                    <div class="content-holder">
-                        <h6 class="title">How to Boost Your Website Performance</h6>
-                        <p class="post-details">
-                            <a href="#">By: Evan Julian</a>
-                            <a href="#"><i class="ti-heart text-danger"></i> 456</a>
-                            <a href="#"><i class="ti-comment"></i> 264</a>
-                        </p>
-                        <p>Speed matters! Discover actionable tips to optimize your website’s performance and
-                            improve user experience. Learn about the latest tools and techniques to enhance
-                            loading speed and responsiveness.</p>
-                        <p><b>From CDN integration to image optimization, find out how small changes can make a
-                                big difference.</b></p>
-                        <p>Stay ahead in the competitive digital landscape by implementing effective strategies
-                            that improve your website’s functionality and accessibility.</p>
-                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
-                    </div>
-                </div>
 
-                <div class="blog-card">
-                    <div class="img-holder">
-                        <img src="assets/imgs/blog3.png" alt="Learning JavaScript">
-                    </div>
-                    <div class="content-holder">
-                        <h6 class="title">Mastering JavaScript in 2025</h6>
-                        <p class="post-details">
-                            <a href="#">By: Evan Julian</a>
-                            <a href="#"><i class="ti-heart text-danger"></i> 431</a>
-                            <a href="#"><i class="ti-comment"></i> 312</a>
-                        </p>
-                        <p>JavaScript remains a cornerstone of web development. In this article, explore the key
-                            updates and best practices for mastering JavaScript in 2025.</p>
-                        <p><b>Learn about ES2025 features, frameworks, and tools that enhance your development
-                                workflow.</b></p>
-                        <p>From beginners to advanced developers, this guide provides insights to keep your
-                            skills sharp and relevant in the ever-evolving programming landscape.</p>
-                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="section bg-light py-5">
-        <div class="container">
-            <h2 class="mb-5 text-center"><span class="text-danger">What</span> People Say</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="testimonial-card p-4 shadow rounded">
-                        <div class="testimonial-img mb-3">
-                            <img src="assets/imgs/Testimonial 2.png" class="img-fluid rounded-circle"
-                                alt="Testimonial 1"> </div>
-                        <h5 class="testimonial-name">Eunji Lee</h5>
-                        <p class="testimonial-position text-muted">
-                            <img src="assets/imgs/linecorp_logo.jpeg" alt="Line Corporation"
-                                    style="width: 20px; height: 20px; margin-right: 04px;"> UI/UX Designer at Line Corporation
-                        </p>
-                        <p class="testimonial-text">
-                            "Evan is an exceptional UI/UX designer. His innovative approach to design, paired
-                            with his attention to detail, made our website user-friendly and recommended!"
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="testimonial-card p-4 shadow rounded">
-                        <div class="testimonial-img mb-3">
-                            <img src="assets/imgs/Testimonial 3.png" class="img-fluid rounded-circle"
-                                alt="Testimonial 2"> </div>
-                        <h5 class="testimonial-name">Minseok Kim</h5>
-                        <p class="testimonial-position text-muted">
-                            <img src="assets/imgs/linecorp_logo.jpeg" alt="Line Corporation"
-                                    style="width: 20px; height: 20px; margin-right: 04px;"> Web Developer at Line Corporation
-                        </p>
-                        <p class="testimonial-text">
-                            "Evan's expertise in web development is unmatched. He created a seamless and
-                            responsive website that perfectly aligned with our brand's needs. I was extremely
-                            impressed with his skills!"
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="testimonial-card p-4 shadow rounded">
-                        <div class="testimonial-img mb-3">
-                            <img src="assets/imgs/Testimonial 1.png" class="img-fluid rounded-circle"
-                                alt="Testimonial 3"> </div>
-                        <h5 class="testimonial-name">Jiwon Park</h5>
-                        <p class="testimonial-position text-muted">
-                            <img src="assets/imgs/linecorp_logo.jpeg" alt="Line Corporation"
-                                    style="width: 20px; height: 20px; margin-right: 04px;"> Lead Creative at Line Corporation
-                        </p>
-                        <p class="testimonial-text">
-                            "Evan's creativity is astounding. He has a great ability to craft designs that are
-                            both innovative and functional, ensuring that the final product meets all our
-                            expectations."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mb-4">
-            <a href="https://wa.me/6281387684093" class="btn btn-custom btn-lg" target="_blank">
-                <i class="fab fa-whatsapp"></i> Let’s Connect & Talk
-            </a>
-        </div>
-    </section>
-
-    <div class="section contact" id="contact">
+<!-- Blog Section -->
+<section class="section" id="blog">
 <div class="container">
-    <h2 class="mb-5 text-center">Contact <span class="text-danger">Me</span></h2>
-
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="contact-form-card">
-                <h4 class="contact-title">Send a Message</h4>
-                <form action="https://formspree.io/f/myzpzpdq" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="name" placeholder="Name *" required>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="email" name="email" placeholder="Email *" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" placeholder="Message *" rows="5" style="resize: none;" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                    </div>
-                </form>
-            </div>
+<h2 class="mb-5">Latest <span class="text-danger">News</span></h2>
+<div class="row">
+    <div class="blog-card">
+        <div class="img-holder">
+            <img src="assets/imgs/blog1.png" alt="UI/UX Design Trends 2025">
         </div>
-
-
-                <div class="col-lg-4">
-                    <div class="contact-info-card">
-                        <h4 class="contact-title">Get in Touch</h4>
-                        <p><i class="ti-mobile me-2"></i> Phone: +62-813-8768-4093</p>
-                        <p><i class="ti-map-alt me-2"></i> Address: Tangerang Selatan, Banten, Indonesia</p>
-                        <p><i class="ti-envelope me-2"></i> <a href="mailto:evanpriyasa.id@gmail.com">evanpriyasa.id@gmail.com</a></p>
-                        <ul class="social-icons list-inline">
-                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/evanjulianp/"><i
-                                            class="ti-linkedin"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.instagram.com/m.panjull/"><i
-                                            class="ti-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="https://github.com/Evan-Julian"><i
-                                            class="ti-github"></i></a></li>
-                            <li class="list-inline-item"><a href="mailto:evanpriyasa.id@gmail.com"><i
-                                            class="ti-google"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="content-holder">
+            <h6 class="title">Top UI/UX Design Trends in 2025</h6>
+            <p class="post-details">
+                <a href="#">By: Evan Julian</a>
+                <a href="#"><i class="ti-heart text-danger"></i> 234</a>
+                <a href="#"><i class="ti-comment"></i> 123</a>
+            </p>
+            <p>Discover the latest trends in UI/UX design for 2025, from dark mode enhancements to
+                minimalist user interfaces. Learn how these trends are shaping the future of digital
+                design.</p>
+            <p><b>Stay ahead in design innovation!</b></p>
+            <p>Explore tips and strategies for creating engaging user experiences that are both
+                functional and visually appealing. Embrace the evolution of design trends in this
+                rapidly changing field.</p>
+            <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
         </div>
     </div>
-    <a href="mailto:evan@email.com" class="floating-btn">
-  <i class="ti-email"></i>
+
+    <div class="blog-card">
+        <div class="img-holder">
+            <img src="assets/imgs/blog2.png" alt="Boosting Website Performance">
+        </div>
+        <div class="content-holder">
+            <h6 class="title">How to Boost Your Website Performance</h6>
+            <p class="post-details">
+                <a href="#">By: Evan Julian</a>
+                <a href="#"><i class="ti-heart text-danger"></i> 456</a>
+                <a href="#"><i class="ti-comment"></i> 264</a>
+            </p>
+            <p>Speed matters! Discover actionable tips to optimize your website’s performance and
+                improve user experience. Learn about the latest tools and techniques to enhance
+                loading speed and responsiveness.</p>
+            <p><b>From CDN integration to image optimization, find out how small changes can make a
+                    big difference.</b></p>
+            <p>Stay ahead in the competitive digital landscape by implementing effective strategies
+                that improve your website’s functionality and accessibility.</p>
+            <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <div class="img-holder">
+            <img src="assets/imgs/blog3.png" alt="Learning JavaScript">
+        </div>
+        <div class="content-holder">
+            <h6 class="title">Mastering JavaScript in 2025</h6>
+            <p class="post-details">
+                <a href="#">By: Evan Julian</a>
+                <a href="#"><i class="ti-heart text-danger"></i> 431</a>
+                <a href="#"><i class="ti-comment"></i> 312</a>
+            </p>
+            <p>JavaScript remains a cornerstone of web development. In this article, explore the key
+                updates and best practices for mastering JavaScript in 2025.</p>
+            <p><b>Learn about ES2025 features, frameworks, and tools that enhance your development
+                    workflow.</b></p>
+            <p>From beginners to advanced developers, this guide provides insights to keep your
+                skills sharp and relevant in the ever-evolving programming landscape.</p>
+            <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="testimonials" class="section bg-light py-5">
+<div class="container">
+<h2 class="mb-5 text-center"><span class="text-danger">What</span> People Say</h2>
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4 mb-4">
+        <div class="testimonial-card p-4 shadow rounded">
+            <div class="testimonial-img mb-3">
+                <img src="assets/imgs/Testimonial 2.png" class="img-fluid rounded-circle"
+                    alt="Testimonial 1"> </div>
+            <h5 class="testimonial-name">Eunji Lee</h5>
+            <p class="testimonial-position text-muted">
+                <img src="assets/imgs/linecorp_logo.jpeg" alt="Line Corporation"
+                        style="width: 20px; height: 20px; margin-right: 04px;"> UI/UX Designer at Line Corporation
+            </p>
+            <p class="testimonial-text">
+                "Evan is an exceptional UI/UX designer. His innovative approach to design, paired
+                with his attention to detail, made our website user-friendly and recommended!"
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-4">
+        <div class="testimonial-card p-4 shadow rounded">
+            <div class="testimonial-img mb-3">
+                <img src="assets/imgs/Testimonial 3.png" class="img-fluid rounded-circle"
+                    alt="Testimonial 2"> </div>
+            <h5 class="testimonial-name">Minseok Kim</h5>
+            <p class="testimonial-position text-muted">
+                <img src="assets/imgs/linecorp_logo.jpeg" alt="Line Corporation"
+                        style="width: 20px; height: 20px; margin-right: 04px;"> Web Developer at Line Corporation
+            </p>
+            <p class="testimonial-text">
+                "Evan's expertise in web development is unmatched. He created a seamless and
+                responsive website that perfectly aligned with our brand's needs. I was extremely
+                impressed with his skills!"
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-4">
+        <div class="testimonial-card p-4 shadow rounded">
+            <div class="testimonial-img mb-3">
+                <img src="assets/imgs/Testimonial 1.png" class="img-fluid rounded-circle"
+                    alt="Testimonial 3"> </div>
+            <h5 class="testimonial-name">Jiwon Park</h5>
+            <p class="testimonial-position text-muted">
+                <img src="assets/imgs/linecorp_logo.jpeg" alt="Line Corporation"
+                        style="width: 20px; height: 20px; margin-right: 04px;"> Lead Creative at Line Corporation
+            </p>
+            <p class="testimonial-text">
+                "Evan's creativity is astounding. He has a great ability to craft designs that are
+                both innovative and functional, ensuring that the final product meets all our
+                expectations."
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="text-center mb-4">
+<a href="https://wa.me/6281387684093" class="btn btn-custom btn-lg" target="_blank">
+    <i class="fab fa-whatsapp"></i> Let’s Connect & Talk
+</a>
+</div>
+</section>
+
+<div class="section contact" id="contact">
+<div class="container">
+<h2 class="mb-5 text-center">Contact <span class="text-danger">Me</span></h2>
+
+<div class="row">
+<div class="col-lg-8">
+<div class="contact-form-card">
+    <h4 class="contact-title">Send a Message</h4>
+    <form action="https://formspree.io/f/myzpzpdq" method="POST">
+        <div class="form-group">
+            <input class="form-control" type="text" name="name" placeholder="Name *" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="email" name="email" placeholder="Email *" required>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" name="message" placeholder="Message *" rows="5" style="resize: none;" required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </div>
+    </form>
+</div>
+</div>
+
+
+    <div class="col-lg-4">
+        <div class="contact-info-card">
+            <h4 class="contact-title">Get in Touch</h4>
+            <p><i class="ti-mobile me-2"></i> Phone: +62-813-8768-4093</p>
+            <p><i class="ti-map-alt me-2"></i> Address: Tangerang Selatan, Banten, Indonesia</p>
+            <p><i class="ti-envelope me-2"></i> <a href="mailto:evanpriyasa.id@gmail.com">evanpriyasa.id@gmail.com</a></p>
+            <ul class="social-icons list-inline">
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/evanjulianp/"><i
+                                class="ti-linkedin"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/m.panjull/"><i
+                                class="ti-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="https://github.com/Evan-Julian"><i
+                                class="ti-github"></i></a></li>
+                <li class="list-inline-item"><a href="mailto:evanpriyasa.id@gmail.com"><i
+                                class="ti-google"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<a href="mailto:evan@email.com" class="floating-btn">
+<i class="ti-email"></i>
 </a>
 
 
 </div> <footer class="bg-dark text-light py-4">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 offset-md-1">
-                <h5 class="text-light">About Me</h5>
-                <p class="text-light">I’m Evan Julian, a passionate web designer and developer, focused on
-                    creating user-centered digital experiences and innovative solutions.</p>
-            </div>
-            <div class="col-md-3">
-                <h5 class="text-light">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#home" class="text-light">Home</a></li>
-                    <li><a href="#about" class="text-light">About</a></li>
-                    <li><a href="#resume" class="text-light">Resume</a></li>
-                    <li><a href="#portfolio" class="text-light">Portfolio</a></li>
-                    <li><a href="#contact" class="text-light">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h5 class="text-light">Contact</h5>
-                <ul class="list-unstyled">
-                    <li><i class="ti-mobile me-2"></i> +62-813-8768-4093</li>
-                    <li><i class="ti-map-alt me-2"></i> Tangerang Selatan, Banten, Indonesia</li>
-                    <li><i class="ti-envelope me-2"></i> <a href="mailto:evanpriyasa.id@gmail.com">evanpriyasa.id@gmail.com</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/evanjulianp/"><i
-                            class="ti-linkedin"></i></a>
-                    <a href="https://www.instagram.com/m.panjull/"><i
-                            class="ti-instagram"></i></a>
-                    <a href="https://github.com/Evan-Julian"><i
-                            class="ti-github"></i></a>
-                    <a href="mailto:evanpriyasa.id@gmail.com"><i
-                            class="ti-google"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-3">
-            <p class="text-light small mb-0">&copy;
-                <script>document.write(new Date().getFullYear())</script> Evan Julian. All Rights Reserved.
-            </p>
-        </div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4 offset-md-1">
+    <h5 class="text-light">About Me</h5>
+    <p class="text-light">I’m Evan Julian, a passionate web designer and developer, focused on
+        creating user-centered digital experiences and innovative solutions.</p>
+</div>
+<div class="col-md-3">
+    <h5 class="text-light">Quick Links</h5>
+    <ul class="list-unstyled">
+        <li><a href="#home" class="text-light">Home</a></li>
+        <li><a href="#about" class="text-light">About</a></li>
+        <li><a href="#resume" class="text-light">Resume</a></li>
+        <li><a href="#portfolio" class="text-light">Portfolio</a></li>
+        <li><a href="#contact" class="text-light">Contact</a></li>
+    </ul>
+</div>
+<div class="col-md-4">
+    <h5 class="text-light">Contact</h5>
+    <ul class="list-unstyled">
+        <li><i class="ti-mobile me-2"></i> +62-813-8768-4093</li>
+        <li><i class="ti-map-alt me-2"></i> Tangerang Selatan, Banten, Indonesia</li>
+        <li><i class="ti-envelope me-2"></i> <a href="mailto:evanpriyasa.id@gmail.com">evanpriyasa.id@gmail.com</a></li>
+    </ul>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/evanjulianp/"><i
+                class="ti-linkedin"></i></a>
+        <a href="https://www.instagram.com/m.panjull/"><i
+                class="ti-instagram"></i></a>
+        <a href="https://github.com/Evan-Julian"><i
+                class="ti-github"></i></a>
+        <a href="mailto:evanpriyasa.id@gmail.com"><i
+                class="ti-google"></i></a>
     </div>
+</div>
+</div>
+<div class="text-center mt-3">
+<p class="text-light small mb-0">&copy;
+    <script>document.write(new Date().getFullYear())</script> Evan Julian. All Rights Reserved.
+</p>
+</div>
+</div>
 </footer>
 
 <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
@@ -870,7 +889,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/isotope/3.0.6/isotope.pkgd.min.js"></script>
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

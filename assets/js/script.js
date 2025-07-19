@@ -1,43 +1,37 @@
 // Smooth scroll
 $(document).ready(function () {
-  $(".navbar .nav-link").on("click", function (event) {
-      if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
+    $(".navbar .nav-link").on("click", function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
 
-          $("html, body").animate(
-              {
-                  scrollTop: $(hash).offset().top,
-              },
-              100, // Durasi scroll
-              function () {
-                  window.location.hash = hash;
-              }
-          );
-      }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const items = document.querySelectorAll(".portfolio-item");
-
-    filterButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            // Active class
-            filterButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-
-            const filterValue = btn.getAttribute("data-filter").replace(".", "");
-
-            items.forEach(item => {
-                if (filterValue === "*" || item.classList.contains(filterValue)) {
-                    item.classList.remove("hide");
-                } else {
-                    item.classList.add("hide");
+            $("html, body").animate(
+                {
+                    scrollTop: $(hash).offset().top,
+                },
+                100, // Durasi scroll
+                function () {
+                    window.location.hash = hash;
                 }
-            });
-        });
+            );
+        }
+    });
+
+    // Inisialisasi Isotope untuk filtering portofolio
+    var $portfolioGrid = $('.portfolio-container').isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows',
+        transitionDuration: '0.6s'
+    });
+
+    // Event listener untuk tombol filter
+    $(".filter-btn").on("click", function () {
+        $(".filter-btn").removeClass("active");
+        $(this).addClass("active");
+
+        var filterValue = $(this).attr('data-filter');
+
+        $portfolioGrid.isotope({ filter: filterValue });
     });
 });
 
@@ -89,4 +83,3 @@ window.addEventListener("scroll", () => {
   const scrollPercent = (scrollTop / docHeight) * 100;
   document.getElementById("progress-bar").style.width = scrollPercent + "%";
 });
-

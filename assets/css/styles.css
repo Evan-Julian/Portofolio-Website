@@ -12124,7 +12124,7 @@ footer .social-icons a:hover {
   position: fixed;
   bottom: 90px;
   right: 30px;
-  background-color: #f44336;
+  background-color: #F85C70;
   color: white;
   width: 50px;
   height: 50px;
@@ -12144,4 +12144,80 @@ footer .social-icons a:hover {
 .floating-btn:hover {
   transform: scale(1.1);
   background-color: #d32f2f;
+  color: white;
+}
+
+/* === Tools Section === */
+.tools-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tools-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Swiper container */
+.tools-swiper {
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+/* Swiper wrapper */
+.tools-grid {
+  display: flex;
+}
+
+/* Swiper slide uniform */
+.swiper-slide {
+  width: 200px; /* atau sesuai yang kamu mau */
+  flex-shrink: 0;
+}
+
+/* Tool item style */
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #343a40; /* <<--- Ini nih warna abu-abunya! */
+  padding: 30px;
+  border-radius: 8px; /* <<--- Ini buat bikin sudutnya bulet-bulet gemes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  width: 140px;
+  height: 130px !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* bayang-bayang manja */
+}
+.tool-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.tool-item:hover {
+  transform: scale(1.05); /* diperbesar dikit, tapi nggak loncat */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* soft shadow aja biar elegan */
+}
+
+/* Logo */
+.tool-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Text label */
+.tool-item p {
+  margin: 0;
+  font-weight: 500;
+  color: #FFFFFF;
+  font-size: 14px;
+  text-align: center;
+}
+.tools-swiper .swiper-slide {
+  width: 200px !important;
+  flex-shrink: 0;
+}
+.tools-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
 }

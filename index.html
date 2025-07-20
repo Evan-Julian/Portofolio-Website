@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -514,6 +517,76 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6
 </div>
 </section>
 
+<!-- ===== Tools Section Start ===== -->
+<section id="tools" class="tools-section">
+  <div class="container">
+    <h2 class="section-title"><span class="text-danger">My</span> Tools</h2>
+    <div class="swiper tools-swiper">
+      <div class="swiper-wrapper tools-grid">
+        <!-- 11 Tools -->
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/Figma-logo.svg" alt="Figma" />
+          <p>Figma</p>
+        </div>
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/vscode.png" alt="VS Code" />
+          <p>VS Code</p>
+        </div>
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/github-white-icon.webp" alt="GitHub" />
+          <p>GitHub</p>
+        </div>
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/tableau-software.png" alt="Tableau" />
+          <p>Tableau</p>
+        </div>
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/Jupyter_logo.png" alt="Jupyter Notebook" />
+          <p>Jupyter</p>
+        </div>
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/Power BI.png" alt="Power BI" />
+          <p>Power BI</p>
+        </div>
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/Jira.png" alt="Jira" />
+          <p>Jira</p>
+        </div>
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/android-studio-icon.webp" alt="Android Studio" />
+          <p>Android Studio</p>
+        </div>
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/Notion_app_logo.png" alt="Notion" />
+          <p>Notion</p>
+        </div>
+        <div class="swiper-slide tool-item">
+          <img src="assets/imgs/xampp_94513.webp" alt="Xampp" />
+          <p>Xampp</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Tools Section End ===== -->
+
+<!-- ===== Swiper Script Start ===== -->
+<script>
+const toolsSwiper = new Swiper('.tools-swiper', {
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  speed: 3000,
+  allowTouchMove: false,
+});
+</script>
+<!-- ===== Swiper Script End ===== -->
+
+
 <!-- Portfolio Section -->
 <section class="section bg-custom-gray" id="portfolio">
 <div class="container">
@@ -890,6 +963,7 @@ items.forEach(item => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/isotope/3.0.6/isotope.pkgd.min.js"></script>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

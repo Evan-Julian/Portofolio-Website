@@ -12330,43 +12330,72 @@ p {
   color: #f85c70;
 }
 
+/* Perbarui aturan ini */
 .portfolio .filters {
   border-bottom: 2px solid #dee2e6;
   border-radius: 0;
   padding-bottom: 4px;
   margin: 0 auto 20px;
-  max-width: 400px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  max-width: 100%;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 15px 4px;
+  min-width: 0; /* Tambahkan ini: Pastikan flex container tidak memiliki lebar minimum yang menghalangi wrapping */
 }
 
-.portfolio .filters a {
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  display: block;
-  color: #212529;
-  font-size: 13px;
-  font-weight: 500;
-  opacity: 0.7;
-  padding: 4px 10px;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
+/* Aturan untuk tombol di dalamnya */
+.portfolio .filters .filter-btn {
+  flex-basis: auto;
+  flex-grow: 0;
+  padding: 8px 15px;
+  font-size: 14px;
+  white-space: nowrap;
+  min-width: 100px; /* Pertahankan ini sebagai default */
+  text-align: center;
+  box-sizing: border-box; /* Tambahkan ini: memastikan padding dan border dihitung dalam lebar total */
 }
 
-.portfolio .filters a:first-child {
-  margin-left: 0;
+/* Media query khusus untuk layar yang lebih kecil (misalnya, di bawah 576px, breakpoint default Bootstrap 'sm') */
+@media (max-width: 575.98px) {
+  .portfolio .filters {
+    gap: 5px; /* Sedikit kurangi jarak antar tombol */
+    padding: 0 5px 4px; /* Kurangi padding horizontal */
+    flex-direction: row; /* Pastikan tetap row jika ada ruang, tapi wrap */
+  }
+
+  .portfolio .filters .filter-btn {
+    font-size: 12px; /* Lebih kecil font-size-nya */
+    padding: 6px 10px; /* Kurangi padding */
+    min-width: unset; /* Hapus min-width agar tombol bisa mengecil sesuai konten */
+    width: auto; /* Biarkan lebar menyesuaikan konten tanpa min-width */
+    flex-basis: auto; /* Pastikan kembali auto */
+  }
 }
 
-.portfolio .filters a:last-child {
-  margin-right: 0;
+/* Media query untuk layar ekstra kecil, memaksa kolom (misalnya, di bawah 450px atau 400px) */
+/* Coba ubah 400px menjadi 450px atau 480px jika masih nabrak di layar mobile umum */
+@media (max-width: 450px) {
+  /* Mengubah 400px ke 450px untuk cakupan yang lebih luas */
+  .portfolio .filters {
+    flex-direction: column; /* Memaksa tombol untuk menumpuk secara vertikal */
+    gap: 8px; /* Jarak antar tombol ketika dalam kolom */
+    padding: 0 15px 4px; /* Sesuaikan padding */
+  }
+
+  .portfolio .filters .filter-btn {
+    width: 100%; /* Buat tombol mengambil lebar penuh di layar super kecil */
+    max-width: 280px; /* Batasi lebar maksimum agar tidak terlalu lebar */
+    margin: 0 auto; /* Pusatkan tombol ketika dalam mode kolom */
+    font-size: 14px; /* Kembalikan ukuran font agar mudah dibaca */
+    padding: 10px 15px; /* Sesuaikan padding */
+  }
 }
+
+/* Aturan lama yang tidak lagi diperlukan atau duplikat (sekarang dihapus) */
+/* .portfolio .filters a:first-child { margin-left: 0; } */
+/* .portfolio .filters a:last-child { margin-right: 0; } */
 
 .portfolio .filters a:hover {
   opacity: 0.9;
@@ -12436,7 +12465,6 @@ p {
   opacity: 1;
   visibility: visible;
 }
-
 /* blog wrapper */
 .blog-card {
   display: -webkit-box;

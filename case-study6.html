@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      SAS Visual Analytics Case Study - GadgetEra Cellular Gadget Sales Analysis
+    </title>
+    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/themify-icons/css/themify-icons.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/case-study.css" />
+  </head>
+  <body>
+    <section class="home home-6" id="home">
+      <div class="home-text container">
+        <h2 class="home-title">
+          Cellular Gadget Sales Analysis for PT GadgetEra: Leveraging Advanced
+          Big Data Analytics for Strategic Decision Making
+        </h2>
+        <span class="home-subtitle"
+          >An in-depth analysis of cellular gadget sales data using descriptive,
+          predictive, and prescriptive analytics with SAS Visual Analytics to
+          address strategic decision-making challenges at PT GadgetEra.</span
+        >
+      </div>
+      <a href="index.html#portfolio" class="btn btn-danger btn-sm mt-4"
+        >Back to Portfolio</a
+      >
+    </section>
+
+    <section class="section my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="case-study-content">
+              <h3 class="text-danger">
+                SAS Visual Analytics: Cellular Gadget Sales Analysis for PT
+                GadgetEra
+              </h3>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 1.jpg"
+                  alt="Company Logo Project"
+                  class="img-fluid"
+                />
+                <p class="image-caption">Figure 1: Company Logo</p>
+              </div>
+              <p>
+                PT GadgetEra is a leading player in the cellular
+                telecommunications industry, operating since 2010. The company
+                is committed to providing innovative network-based communication
+                services that adapt to technological advancements, from the 3G
+                to 5G era. By offering high-speed and low-latency network
+                solutions, PT GadgetEra supports future technologies such as
+                augmented reality (AR), virtual reality (VR), and autonomous
+                vehicles. The company is also known for integrating Internet of
+                Things (IoT) technology and data analytics to enhance
+                connectivity and operational efficiency. For over a decade, PT
+                GadgetEra has continuously invested in network capacity
+                development, energy efficiency, and advanced security systems to
+                protect user data. With a vision to be a pioneer in digital
+                transformation, PT GadgetEra provides strategic solutions for
+                the telecommunications, industrial, and government sectors to
+                remain competitive in the digital era.
+              </p>
+
+              <h3 class="text-danger">
+                1. The Problem: Data-Driven Strategic Decision-Making Challenges
+              </h3>
+              <p>
+                PT GadgetEra faces several key challenges in supporting
+                data-driven strategic decision-making, including:
+              </p>
+              <ul class="styled-list">
+                <li>
+                  <i class="bx bx-search-alt"></i> Managing Increasingly Large
+                  Customer Data: With the rapid increase in mobile service
+                  users, the company faces the challenge of processing and
+                  analyzing customer data in real-time, including demographic
+                  data, sales data, and customer reviews.
+                </li>
+                <li>
+                  <i class="bx bx-compass"></i> Understanding Customer Behavior:
+                  The company needs to understand customer behavior patterns to
+                  enhance loyalty, design effective marketing strategies, and
+                  meet evolving market needs.
+                </li>
+                <li>
+                  <i class="bx bx-line-chart-down"></i> Discount and Promotion
+                  Effectiveness: GadgetEra needs a way to evaluate the
+                  effectiveness of discount categories and promotional
+                  strategies to maximize revenue and attract more customers.
+                </li>
+                <li>
+                  <i class="bx bx-target-lock"></i> Customer Sentiment and
+                  Complaint Analysis: GadgetEra faces challenges in
+                  understanding customer sentiment through reviews, including
+                  identifying complaints related to products, delivery services,
+                  or pricing.
+                </li>
+                <li>
+                  <i class="bx bx-check-circle"></i> Optimizing Strategic
+                  Decision-Making: The company requires a system that can
+                  provide data-driven insights to support faster, more accurate
+                  decisions focused on improving operational efficiency and
+                  customer experience.
+                </li>
+                <li>
+                  <i class="bx bx-check-circle"></i> Data and Technology
+                  Integration: The company needs integration between internal
+                  data and advanced analytical technology to generate
+                  comprehensive strategic insights to remain competitive in the
+                  telecommunications industry.
+                </li>
+              </ul>
+
+              <h3 class="text-danger">2. Data Understanding and Preparation</h3>
+              <p>
+                Two main datasets were used for this analysis: `sales.csv`
+                (before preprocessing) and `GADGETERA_CUSTOMER_DATA` (after
+                preprocessing). Additionally, `GADGETERA_REVIEWS` was used for
+                text analytics.
+              </p>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 2.png"
+                  alt="Dataset Before Preprocessing"
+                  class="img-fluid"
+                />
+                <p class="image-caption">
+                  Figure 2: Dataset Before Preprocessing
+                </p>
+              </div>
+              <h4>Dataset `sales.csv` (Before Preprocessing):</h4>
+              <p>
+                This dataset is the initial version of the data used for
+                analysis. It consists of 12 columns and contains basic
+                attributes about products. Its purpose is to serve as the
+                initial input for the preprocessing stage before further
+                analysis.
+              </p>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 3.png"
+                  alt="Dataset After Preprocessing"
+                  class="img-fluid"
+                />
+                <p class="image-caption">
+                  Figure 3: Dataset After Preprocessing
+                </p>
+              </div>
+              <h4>Dataset `GADGETERA_CUSTOMER_DATA` (After Preprocessing):</h4>
+              <p>
+                This dataset is the result of preprocessing `sales.csv` with the
+                addition of several relevant columns for advanced analysis. It
+                has 25 columns covering information such as Brands, Camera,
+                Colors, Memory, Storage, Rating, Selling Price, Original Price,
+                Mobile, Discount, Discount Category, Discount Percentage, City
+                Coordinates, Country, State, City, Customer Type, Purchase
+                Platform, Delivery Method, Transaction Date, Product Category,
+                Loyalty Level, Purchase Frequency, Satisfaction Rating, and Age.
+                This dataset is used for descriptive, predictive, and
+                prescriptive analytics, providing in-depth insights related to
+                sales patterns, customer loyalty, and marketing strategies.
+              </p>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 4.png"
+                  alt="Customer Review Dataset"
+                  class="img-fluid"
+                />
+                <p class="image-caption">Figure 4: Customer Review Dataset</p>
+              </div>
+              <h4>Dataset `GADGETERA_REVIEWS` (For Text Analytics):</h4>
+              <p>
+                This dataset focuses on text analysis of customer reviews. It
+                consists of 16 columns and includes information such as Review
+                ID, Customer ID, Product ID, Review Text, Review Date, Sentiment
+                Score (Positive, Neutral, Negative), Sentiment Score Numeric,
+                Sentiment Count, Keywords, Rating, Purchase Platform, Delivery
+                Method, Month, Complaint Type (Delivery, Performance, Price),
+                and Satisfaction Level (Very Satisfied, Satisfied,
+                Dissatisfied). This dataset is used in text analytics to
+                identify sentiment patterns, complaints, and customer review
+                trends to improve product and service quality.
+              </p>
+
+              <h3 class="text-danger">3. Visual Analysis Representation</h3>
+              <p>
+                The GadgetEra Dashboard is designed to provide strategic
+                data-driven insights using three main approaches: Descriptive
+                Analytics, Predictive Analytics, and Prescriptive Analytics.
+                These three approaches complement each other to help the company
+                understand current business conditions, project future trends,
+                and provide data-driven strategic recommendations.
+              </p>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 5.png"
+                  alt="GadgetEra Dashboard"
+                  class="img-fluid"
+                />
+                <p class="image-caption">Figure 5: GadgetEra Dashboard</p>
+              </div>
+
+              <h4>Descriptive Analytics:</h4>
+              <p>
+                Provides insights based on historical data to understand current
+                business performance. Examples include customer reports, sales
+                reports, and rating reports, which show information such as
+                frequency by age, purchase platform, and customer rating
+                distribution. The dashboard measures, monitors, and manages
+                business performance in accordance with the problem analysis.
+              </p>
+              <h5>Customer Demographics Report:</h5>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 6.png"
+                  alt="Customer Demographics Report"
+                  class="img-fluid"
+                />
+                <p class="image-caption">
+                  Figure 6: Customer Demographics Report
+                </p>
+              </div>
+              <p>
+                This dashboard provides in-depth insights into customer
+                characteristics, including age, gender, purchase platform,
+                delivery method, and customer loyalty level.
+              </p>
+              <ul>
+                <li>
+                  Frequency by Age: The histogram shows that the majority of
+                  customers are between 20-40 years old, with a peak
+                  distribution in their 30s.
+                </li>
+                <li>
+                  Frequency by Purchase Platform: The bar chart indicates that
+                  customer purchase platform distribution is fairly even across
+                  Mobile App, Physical Store, and Website, with each platform
+                  recording approximately 1,000 transactions.
+                </li>
+                <li>
+                  Frequency by Delivery Method: Home Delivery dominates with
+                  over 1,300 transactions, followed by In-Store Pickup and
+                  Courier Service.
+                </li>
+                <li>
+                  Distribution by Gender: Male customers are slightly more
+                  dominant (51.3%) than female customers (48.7%).
+                </li>
+                <li>
+                  Frequency by Loyalty Level: Shows an even distribution among
+                  Loyal Customer, New Customer, and Returning Customer
+                  categories, each recording around 1,000 customers.
+                </li>
+              </ul>
+
+              <h5>Sales Report:</h5>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 7.png"
+                  alt="Sales Report"
+                  class="img-fluid"
+                />
+                <p class="image-caption">Figure 12: Sales Report</p>
+              </div>
+              <p>
+                This dashboard provides insights into product sales performance,
+                including information on revenue, discounts, and sales
+                distribution by specific categories.
+              </p>
+              <ul>
+                <li>
+                  Total Revenue Before and After Discount: Initial revenue
+                  before discount was $88M, final revenue after discount was
+                  $82M, with a total discount of $5.9M.
+                </li>
+                <li>
+                  Selling Price Distribution by Brand: Apple recorded the
+                  highest revenue at $32M, followed by Samsung at $17M.
+                </li>
+                <li>
+                  Delivery Method Distribution related to Sales: Home Delivery
+                  generated the highest revenue at $36M, followed by In-Store
+                  Pickup ($30M) and Courier Service ($16M).
+                </li>
+                <li>
+                  Top Selling Products: Apple iPhone 13 Pro Max was the top
+                  seller at $5.6M, followed by Apple iPhone 11 Pro and Apple
+                  iPhone 11.
+                </li>
+                <li>
+                  Discount Category Distribution: Low discount categories
+                  dominated with 2.3K products.
+                </li>
+              </ul>
+
+              <h5>Rating Report:</h5>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 8.png"
+                  alt="Rating Report"
+                  class="img-fluid"
+                />
+                <p class="image-caption">Figure 18: Rating Report</p>
+              </div>
+              <p>
+                This dashboard provides insights into customer reviews of
+                products, including information on best and lowest-rated phones,
+                most reviewed brands, and rating patterns across various
+                categories.
+              </p>
+              <ul>
+                <li>
+                  Lowest Rated Phones: Infinix Zero 8i had the lowest average
+                  rating (4.2), followed by Lenovo A5000 and Lenovo A1000.
+                </li>
+                <li>
+                  Most Rated Brands: Realme and OPPO dominated with 20.8% each,
+                  followed by Samsung and Apple.
+                </li>
+                <li>
+                  Rating Distribution by Customer City: Kolkata and Mumbai had
+                  the largest contributions (25.1% each).
+                </li>
+                <li>
+                  Rating by Gender: Male and female customers gave the same
+                  average rating of 4.1.
+                </li>
+                <li>
+                  Rating by Delivery Method: Home Delivery had the highest
+                  average rating.
+                </li>
+                <li>
+                  Highest Rated Phones: Apple iPhone 11 and Apple iPhone 11 Pro
+                  received the highest average rating of 4.6.
+                </li>
+              </ul>
+
+              <h5>Customer Loyalty Report:</h5>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 9.png"
+                  alt="Customer Loyalty Report"
+                  class="img-fluid"
+                />
+                <p class="image-caption">Figure 25: Customer Loyalty Report</p>
+              </div>
+              <p>
+                This dashboard provides insights into customer loyalty based on
+                various categories such as rating, delivery method, gender, and
+                geographical location.
+              </p>
+              <ul>
+                <li>
+                  Loyalty Distribution by Rating: Loyal Customers had the
+                  highest average rating of 4.2.
+                </li>
+                <li>
+                  Customer Distribution by City and State: Chennai recorded the
+                  highest number of loyal customers, followed by Mumbai and
+                  Delhi.
+                </li>
+                <li>
+                  Customer Loyalty by Delivery Method: Home Delivery showed the
+                  highest number of loyal customers.
+                </li>
+                <li>
+                  Customer Loyalty by Gender: Male customers were slightly more
+                  dominant in the Loyal Customer category.
+                </li>
+                <li>
+                  Customer Loyalty by City with Discount Details: Mumbai
+                  recorded loyal customers with the highest total discount of
+                  $612K.
+                </li>
+              </ul>
+
+              <h4>Predictive Analytics:</h4>
+              <p>
+                Leverages historical data and statistical models to predict
+                future trends and customer behavior. This is seen in the sales
+                and discount analytics model, where algorithms are used to
+                predict discount categories and sales performance based on
+                specific variables.
+              </p>
+              <h5>Sales and Discount Analytics Model Report:</h5>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 10.png"
+                  alt="Sales and Discount Analytics Model Report"
+                  class="img-fluid"
+                />
+                <p class="image-caption">
+                  Figure 31: Sales and Discount Analytics Model Report
+                </p>
+              </div>
+              <p>
+                This dashboard provides predictive insights into sales patterns
+                and discount effectiveness, and evaluates factors influencing
+                discount categories.
+              </p>
+              <ul>
+                <li>
+                  Factors Influencing Discount Category: Variable Importance in
+                  models like Forest, Gradient Boosting, and Decision Tree shows
+                  that Discount Percentage has the greatest influence.
+                </li>
+                <li>
+                  Predictive Model Accuracy: Confusion Matrices indicate high
+                  accuracy, with most predictions in the correct category.
+                  Forest and Gradient Boosting models achieved the best accuracy
+                  with very low misclassification rates.
+                </li>
+                <li>
+                  Iteration Process in Gradient Boosting and Neural Network:
+                  Iteration Plots show a gradual decrease in loss, indicating
+                  optimal model training.
+                </li>
+                <li>
+                  Neural Network Structure: The visualization shows a network
+                  structure with varying connection weights, providing deeper
+                  insights into complex variable relationships.
+                </li>
+              </ul>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>Accuracy (%)</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Random Forest</td>
+                    <td>99.3</td>
+                    <td>
+                      Stable, high accuracy, capable of handling high complexity
+                      variables.
+                    </td>
+                    <td>
+                      More difficult to interpret results compared to linear
+                      models.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Decision Tree</td>
+                    <td>97.4</td>
+                    <td>
+                      Simple interpretation, tree visualization helps dominant
+                      variable analysis.
+                    </td>
+                    <td>Prone to overfitting if not well-tuned.</td>
+                  </tr>
+                  <tr>
+                    <td>Gradient Boosting</td>
+                    <td>99.8</td>
+                    <td>High accuracy, performs well on noisy data.</td>
+                    <td>
+                      Higher computational time compared to Random Forest.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Neural Network</td>
+                    <td>97.5</td>
+                    <td>
+                      Handles non-linear relationships well, flexible for
+                      various data types.
+                    </td>
+                    <td>
+                      Requires long training time, difficult to interpret
+                      without additional visualization.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="image-caption">
+                Table 3: Summary of Accuracy, Advantages, and Disadvantages of
+                Predictive Models
+              </p>
+              <p>
+                Conclusion on Best Model: Gradient Boosting is the best model
+                due to its highest accuracy (99.8%), very low misclassification
+                rate, and stable prediction results, emphasizing Discount
+                Percentage as a key factor.
+              </p>
+
+              <h4>Prescriptive Analytics:</h4>
+              <p>
+                Provides strategic recommendations based on descriptive and
+                predictive analytical results. For instance, based on customer
+                complaint analysis, the dashboard can recommend actions such as
+                improving logistics services during certain periods or
+                developing product features more relevant to customer needs.
+                This helps the company determine the best steps to improve
+                operational efficiency, enhance customer satisfaction, and
+                optimize revenue.
+              </p>
+              <h5>Text Analytics Report:</h5>
+              <div class="image-placeholder">
+                <img
+                  src="assets/imgs/GadgetEra 11.png"
+                  alt="Text Analytics Report"
+                  class="img-fluid"
+                />
+                <p class="image-caption">Figure 32: Text Analytics Report</p>
+              </div>
+              <p>
+                This dashboard provides insights into customer sentiment,
+                complaint types, and review text patterns.
+              </p>
+              <ul>
+                <li>
+                  Customer Satisfaction Level Distribution: Recommendation:
+                  Focus on improving the experience of dissatisfied customers
+                  (39.4%) through discounts, priority customer service, or
+                  product quality improvements.
+                </li>
+                <li>
+                  Most Frequent Complaint Types: Recommendation: For delivery
+                  complaints (33.8%), improve logistics and real-time tracking.
+                  For price complaints (32.9%), consider competitive pricing and
+                  seasonal discounts. For performance complaints (33.4%),
+                  evaluate product quality and make improvements.
+                </li>
+                <li>
+                  Most Frequent Keywords in Reviews: Recommendation: Focus on
+                  developing long-lasting batteries and improving the delivery
+                  experience, as these are frequently mentioned issues.
+                </li>
+                <li>
+                  Customer Rating Trend by Month: Recommendation: Identify
+                  rating drops in specific months (April-May) and conduct
+                  promotional campaigns or service improvements during those
+                  periods.
+                </li>
+                <li>
+                  Sentiment Score by Delivery Method: Recommendation: Improve
+                  the delivery experience for In-Store Pickup and Home Delivery,
+                  as negative sentiment scores dominate.
+                </li>
+                <li>
+                  Complaint Distribution by Month and Complaint Type:
+                  Recommendation: Further analyze months with high complaints
+                  (July, December) and optimize operations, e.g., by increasing
+                  staff to handle customer complaints during those periods.
+                </li>
+                <li>
+                  Customer Sentiment Distribution: Recommendation: With negative
+                  sentiment dominating, focus on in-depth analysis of negative
+                  reviews to determine specific steps like product development,
+                  more proactive customer service, or brand image campaigns.
+                </li>
+                <li>
+                  Review Text Frequency: Recommendation: Analyze negative
+                  reviews in depth to identify root causes (e.g., battery
+                  issues, product design) and implement technical improvements.
+                  Optimize logistics, promote product advantages, and
+                  continuously monitor sentiment using text analytics.
+                </li>
+              </ul>
+
+              <h3 class="text-danger">4. My Role & Responsibilities</h3>
+              <p>
+                As the author and researcher for this project (for the UAS IS529
+                CL Advanced Big Data Analytics - LAB course), my
+                responsibilities included the comprehensive analysis of PT
+                GadgetEra's cellular gadget sales data. My role involved
+                applying various analytical approaches: Descriptive, Predictive,
+                and Prescriptive Analytics. This encompassed data understanding,
+                preparation, implementation of different machine learning
+                models, evaluation of their performance using SAS Visual
+                Analytics, and interpreting the results to derive actionable
+                insights for strategic decision-making in the cellular gadget
+                industry. I contributed to all phases of the data analysis
+                process, from initial problem identification to model deployment
+                and the final report.
+              </p>
+              <ul class="styled-list">
+                <li>
+                  <i class="bx bx-file-find"></i> Explored and understood the
+                  cellular gadget sales and customer review datasets.
+                </li>
+                <li>
+                  <i class="bx bx-wrench"></i> Performed data preparation,
+                  including cleaning and transformation of the sales data.
+                </li>
+                <li>
+                  <i class="bx bx-brain"></i> Applied descriptive analytics to
+                  generate customer demographics, sales, rating, and customer
+                  loyalty reports.
+                </li>
+                <li>
+                  <i class="bx bx-chart"></i> Developed and evaluated predictive
+                  models (Forest, Decision Tree, Gradient Boosting, Neural
+                  Network) for sales and discount analytics.
+                </li>
+                <li>
+                  <i class="bx bx-line-chart"></i> Utilized text analytics for
+                  prescriptive insights on customer sentiment and complaints.
+                </li>
+                <li>
+                  <i class="bx bx-cloud-upload"></i> Contributed to extracting
+                  actionable insights and recommendations for business
+                  improvement based on the analytical results.
+                </li>
+              </ul>
+
+              <h3 class="text-danger">5. Conclusion & Future Outlook</h3>
+              <p>
+                This analysis provided comprehensive insights into PT
+                GadgetEra's cellular gadget sales, customer behavior, and
+                operational efficiency through descriptive, predictive, and
+                prescriptive analytics. The descriptive analysis offered a clear
+                view of current business performance, customer demographics,
+                sales trends, product ratings, and loyalty. The predictive
+                models, particularly Gradient Boosting, effectively identified
+                key factors influencing discount categories and sales, providing
+                accurate forecasts. Lastly, the prescriptive analytics, derived
+                from text analysis of customer reviews, delivered actionable
+                recommendations to address complaints, improve service, and
+                optimize product features.
+              </p>
+              <p>For future development, key recommendations include:</p>
+              <ul class="styled-list">
+                <li>
+                  <i class="bx bx-data"></i> Data Enhancement: Continuously
+                  improve data quality through better cleaning processes and
+                  explore additional data sources (e.g., social media mentions,
+                  competitor data) for a more holistic view.
+                </li>
+                <li>
+                  <i class="bx bx-bulb"></i> Advanced ML Techniques: Invest in
+                  more advanced machine learning and deep learning models to
+                  handle higher data complexity and uncover even more subtle
+                  patterns in customer behavior.
+                </li>
+                <li>
+                  <i class="bx bx-laptop"></i> Real-time Integration: Integrate
+                  these analytical models into existing operational systems to
+                  facilitate real-time decision-making, allowing for immediate
+                  responses to market changes and customer feedback.
+                </li>
+                <li>
+                  <i class="bx bx-group"></i> Staff Training: Provide continuous
+                  training for internal staff on how to effectively use and
+                  interpret the analytical dashboards and models, fostering a
+                  data-driven culture within the company.
+                </li>
+                <li>
+                  <i class="bx bx-refresh"></i> Continuous Monitoring: Regularly
+                  monitor model performance and recalibrate as needed to ensure
+                  their reliability and responsiveness to evolving market
+                  dynamics and customer preferences.
+                </li>
+              </ul>
+              <p>
+                By implementing these recommendations, PT GadgetEra can further
+                enhance its strategic decision-making capabilities, improve
+                operational efficiency, increase customer satisfaction, and
+                ultimately drive business growth and profitability in the
+                competitive cellular gadget market.
+              </p>
+
+              <div class="text-center mt-5">
+                <a href="index.html#portfolio" class="btn btn-danger btn-lg"
+                  >Back to Portfolio</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="sidebar">
+              <div class="related-case-studies-widget">
+                <h4 class="text-danger">Related Case Studies</h4>
+                <ul class="list-unstyled">
+                  <li class="related-item">
+                    <div class="sidebar-img">
+                      <img
+                        src="assets/imgs/project-1.png"
+                        alt="EduLearn"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="sidebar-info">
+                      <a href="case-study1.html"
+                        >EduLearn: Empowering Students to Overcome Financial and
+                        Academic Challenges</a
+                      >
+                      <p>
+                        How EduLearn is transforming education and supporting
+                        students with academic challenges.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="related-item">
+                    <div class="sidebar-img">
+                      <img
+                        src="assets/imgs/project-2.png"
+                        alt="Medicalife"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="sidebar-info">
+                      <a href="case-study2.html"
+                        >Medicalife: Transforming Healthcare</a
+                      >
+                      <p>
+                        How Medicalife helped improve patient care and
+                        streamline healthcare processes using technology.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="related-item">
+                    <div class="sidebar-img">
+                      <img
+                        src="assets/imgs/project-3.png"
+                        alt="SmartStudy"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="sidebar-info">
+                      <a href="case-study3.html"
+                        >SmartStudy: Revolutionizing E-Learning</a
+                      >
+                      <p>
+                        Exploring the impact of SmartStudy on online education
+                        and its potential for future learning systems.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="related-item">
+                    <div class="sidebar-img">
+                      <img
+                        src="assets/imgs/project-4.png"
+                        alt="Tableau Dashboard"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="sidebar-info">
+                      <a href="case-study4.html"
+                        >Tableau Dashboard: G20 Consumer Behavior</a
+                      >
+                      <p>
+                        Using Tableau to analyze consumer behavior data and
+                        present actionable insights for global markets.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="related-item">
+                    <div class="sidebar-img">
+                      <img
+                        src="assets/imgs/project-5.png"
+                        alt="SAS Visual Analytics"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="sidebar-info">
+                      <a href="case-study5.html"
+                        >SAS Visual Analytics: An Innovative Approach to Data
+                        Visualization</a
+                      >
+                      <p>
+                        How SAS Visual Analytics transformed data analysis and
+                        decision-making processes within organizations.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tag-cloud-widget">
+                <h4 class="text-danger">Tag Cloud</h4>
+                <div class="tags">
+                  <a href="#">Data Science</a>
+                  <a href="#">Big Data Analytics</a>
+                  <a href="#">Machine Learning</a>
+                  <a href="#">Predictive Analytics</a>
+                  <a href="#">Prescriptive Analytics</a>
+                  <a href="#">Descriptive Analytics</a>
+                  <a href="#">SAS Visual Analytics</a>
+                  <a href="#">Cellular Gadget Sales</a>
+                  <a href="#">Customer Loyalty</a>
+                  <a href="#">Text Analytics</a>
+                </div>
+              </div>
+
+              <div class="about-me-widget">
+                <h4 class="text-danger">About Evan Julian</h4>
+                <p>
+                  I’m Evan, an Information Systems student passionate about
+                  creating user-centered digital experiences. I specialize in
+                  UI/UX design and frontend development.
+                </p>
+                <div class="contact-details">
+                  <p>
+                    <i class="ti-email"></i>
+                    <a href="mailto:evanpriyasa.id@gmail.com"
+                      >evanpriyasa.id@gmail.com</a
+                    >
+                  </p>
+                  <p><i class="ti-mobile"></i> +62-813-8768-4093</p>
+                </div>
+                <ul class="social-icons">
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/evanjulianp/"
+                      target="_blank"
+                      ><i class="ti-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/m.panjull/"
+                      target="_blank"
+                      ><i class="ti-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Evan-Julian" target="_blank"
+                      ><i class="ti-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="mailto:evanpriyasa.id@gmail.com" target="_blank"
+                      ><i class="ti-google"></i
+                    ></a>
+                  </li>
+                </ul>
+                <p class="copyright-info">
+                  &copy;
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  Evan Julian. All Rights Reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-light py-4">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 offset-md-1">
+            <h5 class="text-light">About Me</h5>
+            <p class="text-light">
+              I’m Evan Julian, a passionate web designer and developer, focused
+              on creating user-centered digital experiences and innovative
+              solutions.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h5 class="text-light">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html#home" class="text-light">Home</a></li>
+              <li><a href="index.html#about" class="text-light">About</a></li>
+              <li><a href="index.html#resume" class="text-light">Resume</a></li>
+              <li>
+                <a href="index.html#portfolio" class="text-light">Portfolio</a>
+              </li>
+              <li>
+                <a href="index.html#contact" class="text-light">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-light">Contact</h5>
+            <ul class="list-unstyled">
+              <li><i class="ti-mobile me-2"></i> +62-813-8768-4093</li>
+              <li>
+                <i class="ti-map-alt me-2"></i> Tangerang Selatan, Banten,
+                Indonesia
+              </li>
+              <li>
+                <i class="ti-envelope me-2"></i>
+                <a href="mailto:evanpriyasa.id@gmail.com"
+                  >evanpriyasa.id@gmail.com</a
+                >
+              </li>
+            </ul>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/evanjulianp/"
+                ><i class="ti-linkedin"></i
+              ></a>
+              <a href="https://www.instagram.com/m.panjull/"
+                ><i class="ti-instagram"></i
+              ></a>
+              <a href="https://github.com/Evan-Julian"
+                ><i class="ti-github"></i
+              ></a>
+              <a href="mailto:evanpriyasa.id@gmail.com"
+                ><i class="ti-google"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <p class="text-light small mb-0">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Evan Julian. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

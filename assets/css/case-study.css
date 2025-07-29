@@ -276,7 +276,7 @@ img {
   line-height: 1.7;
   margin-bottom: 20px;
   color: var(--text-dark);
-  text-align: justify; /* <-- TAMBAHKAN BARIS INI */
+  text-align: justify;
 }
 
 .case-study-content ul,
@@ -321,7 +321,7 @@ img {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.95em;
-  min-width: 400px; /* Pastikan tabel tidak terlalu sempit di mobile */
+  /* min-width: 400px; */ /* Tidak perlu min-width jika sudah ada overflow-x */
 }
 
 .case-study-content table th,
@@ -345,6 +345,50 @@ img {
 .case-study-content table tbody tr:hover {
   background-color: #e0e0e0;
 }
+
+/* NEW: Wrapper untuk tabel agar bisa di-scroll secara horizontal di mobile */
+/* Jika Anda membungkus tabel dengan <div class="table-responsive"></div> */
+.case-study-content .table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Untuk scroll yang lebih halus di iOS */
+  margin-bottom: 20px; /* Tambahkan margin jika perlu */
+}
+/* Jika Anda tidak membungkus tabel dengan div .table-responsive, dan ingin langsung pada tabel */
+/* @media (max-width: 768px) { */
+/* .case-study-content table { */
+/* display: block; */
+/* overflow-x: auto; */
+/* white-space: nowrap; */ /* Menjaga teks dalam satu baris, tapi hati-hati dengan konten panjang */
+/* } */
+/* .case-study-content table thead, */
+/* .case-study-content table tbody, */
+/* .case-study-content table th, */
+/* .case-study-content table td, */
+/* .case-study-content table tr { */
+/* display: block; */
+/* } */
+/* .case-study-content table thead tr { */
+/* position: absolute; */
+/* top: -9999px; */
+/* left: -9999px; */
+/* } */
+/* .case-study-content table td { */
+/* border: none; */
+/* border-bottom: 1px solid #eee; */
+/* position: relative; */
+/* padding-left: 50%; */
+/* } */
+/* .case-study-content table td:before { */
+/* position: absolute; */
+/* top: 6px; */
+/* left: 6px; */
+/* width: 45%; */
+/* padding-right: 10px; */
+/* white-space: nowrap; */
+/* content: attr(data-column); */
+/* font-weight: bold; */
+/* } */
+/* } */
 
 .image-placeholder {
   margin-top: 30px;
@@ -886,6 +930,7 @@ footer .social-icons a:focus-visible {
   .case-study-content .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px; /* Tambahkan sedikit padding di bawah untuk scrollbar */
   }
   /* Ini wrapper di HTML. Kalau tidak ada, langsung target table */
   /* Misalnya: .case-study-content table { display: block; overflow-x: auto; ... } */

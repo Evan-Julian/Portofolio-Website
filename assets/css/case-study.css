@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap");
+/* Tambahkan font Dosis jika digunakan di HTML Anda */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap");
 
 /* --- 1. Global Styles & Variables --- */
 * {
@@ -75,6 +77,7 @@ a:focus-visible {
   /* Accessibility improvement */
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
+  border-radius: 4px; /* Added border-radius for focus */
 }
 
 li {
@@ -107,7 +110,8 @@ img {
   overflow: hidden; /* Ensure background doesn't overflow */
   background-attachment: fixed; /* NEW: For parallax effect */
   background-position: center; /* Ensure it starts centered */
-  /* Hapus background-size dan background-repeat dari sini, karena sudah ada di home-X */
+  background-size: cover; /* Ensure full cover, moved from specific .home-X */
+  background-repeat: no-repeat; /* Ensure no repeat, moved from specific .home-X */
 }
 
 .home::before {
@@ -128,28 +132,27 @@ img {
 
 /* Backgrounds untuk setiap halaman studi kasus */
 .home-1 {
-  background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader.png")
-    center/cover no-repeat;
+  background-image: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader.png");
 }
 
 .home-2 {
-  background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader2.png")
-    center/cover no-repeat;
+  background-image: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader2.png");
 }
 
 .home-3 {
-  background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader3.png")
-    center/cover no-repeat;
+  background-image: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader3.png");
 }
 
 .home-4 {
-  background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader4.png")
-    center/cover no-repeat;
+  background-image: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader4.png");
 }
 
 .home-5 {
-  background: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader5.png")
-    center/cover no-repeat;
+  background-image: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader5.png");
+}
+
+.home-6 {
+  background-image: url("https://raw.githubusercontent.com/Evan-Julian/Portofolio-Website/main/assets/imgs/CaseStudyHeader6.png");
 }
 
 .home-text {
@@ -232,7 +235,12 @@ img {
   position: relative;
   padding-bottom: 15px;
   text-transform: capitalize;
+  /* Hapus sticky, padding-top, box-shadow dari sini agar tidak "mengambang" */
+  /* position: static; */
+  /* padding-top: 0; */
+  /* box-shadow: none; */
 }
+
 .case-study-content h4 {
   /* Styling untuk sub-heading seperti "User Research & Persona Development" */
   font-family: "Dosis", sans-serif;
@@ -307,6 +315,37 @@ img {
   color: var(--primary-color);
 }
 
+/* Styling untuk tabel */
+.case-study-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.95em;
+  min-width: 400px; /* Pastikan tabel tidak terlalu sempit di mobile */
+}
+
+.case-study-content table th,
+.case-study-content table td {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.case-study-content table th {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.case-study-content table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.case-study-content table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
 .image-placeholder {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -371,6 +410,7 @@ img {
 .btn-danger:focus-visible {
   outline: 2px solid var(--primary-color);
   outline-offset: 4px;
+  border-radius: 4px; /* Added border-radius for consistency */
 }
 
 /* NEW: Button hover effect - subtle overlay */
@@ -680,8 +720,10 @@ footer .social-icons a:focus-visible {
 
 /* --- 7. Responsiveness --- */
 @media (max-width: 992px) {
+  /* Untuk ukuran tablet (lebar layar <= 992px) */
   .home {
     min-height: 380px;
+    background-attachment: scroll; /* Pastikan parallax mati di tablet/mobile */
   }
 
   .home-title {
@@ -738,7 +780,7 @@ footer .social-icons a:focus-visible {
   }
 
   .sidebar h4,
-  .tag-cloud-widget h4, /* Updated selector */
+  .tag-cloud-widget h4,
   .about-me-widget h4 {
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -766,7 +808,6 @@ footer .social-icons a:focus-visible {
   }
 
   .tag-cloud-widget .tags a {
-    /* Updated selector */
     font-size: 0.85rem;
     padding: 6px 12px;
   }
@@ -841,6 +882,14 @@ footer .social-icons a:focus-visible {
     font-size: 0.95rem;
   }
 
+  /* Agar tabel bisa di-scroll horizontal di mobile */
+  .case-study-content .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* Ini wrapper di HTML. Kalau tidak ada, langsung target table */
+  /* Misalnya: .case-study-content table { display: block; overflow-x: auto; ... } */
+
   .sidebar {
     margin-top: 30px;
     padding: 20px;
@@ -848,7 +897,7 @@ footer .social-icons a:focus-visible {
   }
 
   .sidebar h4,
-  .tag-cloud-widget h4, /* Updated selector */
+  .tag-cloud-widget h4,
   .about-me-widget h4 {
     font-size: 1.3rem;
     margin-bottom: 15px;
@@ -884,7 +933,6 @@ footer .social-icons a:focus-visible {
   }
 
   .tag-cloud-widget .tags a {
-    /* Updated selector */
     font-size: 0.8rem;
     padding: 6px 10px;
   }
@@ -945,7 +993,7 @@ footer .social-icons a:focus-visible {
     height: 2px;
   }
   .case-study-content h4 {
-    font-size: 1rem; /* Adjust sub-heading size */
+    font-size: 1rem;
     margin-top: 15px;
     margin-bottom: 5px;
   }
@@ -962,7 +1010,7 @@ footer .social-icons a:focus-visible {
   }
 
   .sidebar h4,
-  .tag-cloud-widget h4, /* Updated selector */
+  .tag-cloud-widget h4,
   .about-me-widget h4 {
     font-size: 1.1rem;
     margin-bottom: 10px;
@@ -989,7 +1037,6 @@ footer .social-icons a:focus-visible {
   }
 
   .tag-cloud-widget .tags a {
-    /* Updated selector */
     font-size: 0.75rem;
     padding: 4px 8px;
   }

@@ -21,6 +21,10 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/case-study.css" />
@@ -55,7 +59,7 @@
               <div class="image-placeholder">
                 <img
                   src="assets/imgs/GadgetEra 1.jpg"
-                  alt="Company Logo Project"
+                  alt="Company Logo GadgetEra"
                   class="img-fluid"
                 />
                 <p class="image-caption">Figure 1: Company Logo</p>
@@ -212,7 +216,7 @@
               <div class="image-placeholder">
                 <img
                   src="assets/imgs/GadgetEra 5.png"
-                  alt="GadgetEra Dashboard"
+                  alt="GadgetEra Dashboard Overview"
                   class="img-fluid"
                 />
                 <p class="image-caption">Figure 5: GadgetEra Dashboard</p>
@@ -231,7 +235,7 @@
               <div class="image-placeholder">
                 <img
                   src="assets/imgs/GadgetEra 6.png"
-                  alt="Customer Demographics Report"
+                  alt="Customer Demographics Report Dashboard"
                   class="img-fluid"
                 />
                 <p class="image-caption">
@@ -243,7 +247,7 @@
                 characteristics, including age, gender, purchase platform,
                 delivery method, and customer loyalty level.
               </p>
-              <ul>
+              <ul class="styled-list">
                 <li>
                   Frequency by Age: The histogram shows that the majority of
                   customers are between 20-40 years old, with a peak
@@ -275,7 +279,7 @@
               <div class="image-placeholder">
                 <img
                   src="assets/imgs/GadgetEra 7.png"
-                  alt="Sales Report"
+                  alt="Sales Report Dashboard"
                   class="img-fluid"
                 />
                 <p class="image-caption">Figure 12: Sales Report</p>
@@ -285,7 +289,7 @@
                 including information on revenue, discounts, and sales
                 distribution by specific categories.
               </p>
-              <ul>
+              <ul class="styled-list">
                 <li>
                   Total Revenue Before and After Discount: Initial revenue
                   before discount was $88M, final revenue after discount was
@@ -315,7 +319,7 @@
               <div class="image-placeholder">
                 <img
                   src="assets/imgs/GadgetEra 8.png"
-                  alt="Rating Report"
+                  alt="Rating Report Dashboard"
                   class="img-fluid"
                 />
                 <p class="image-caption">Figure 18: Rating Report</p>
@@ -326,7 +330,7 @@
                 most reviewed brands, and rating patterns across various
                 categories.
               </p>
-              <ul>
+              <ul class="styled-list">
                 <li>
                   Lowest Rated Phones: Infinix Zero 8i had the lowest average
                   rating (4.2), followed by Lenovo A5000 and Lenovo A1000.
@@ -357,7 +361,7 @@
               <div class="image-placeholder">
                 <img
                   src="assets/imgs/GadgetEra 9.png"
-                  alt="Customer Loyalty Report"
+                  alt="Customer Loyalty Report Dashboard"
                   class="img-fluid"
                 />
                 <p class="image-caption">Figure 25: Customer Loyalty Report</p>
@@ -367,7 +371,7 @@
                 various categories such as rating, delivery method, gender, and
                 geographical location.
               </p>
-              <ul>
+              <ul class="styled-list">
                 <li>
                   Loyalty Distribution by Rating: Loyal Customers had the
                   highest average rating of 4.2.
@@ -382,7 +386,7 @@
                   highest number of loyal customers.
                 </li>
                 <li>
-                  Customer Loyalty by Gender: Male customers were slightly more
+                  Customer Loyalty by Gender: Male customers are slightly more
                   dominant in the Loyal Customer category.
                 </li>
                 <li>
@@ -404,7 +408,7 @@
               <div class="image-placeholder">
                 <img
                   src="assets/imgs/GadgetEra 10.png"
-                  alt="Sales and Discount Analytics Model Report"
+                  alt="Sales and Discount Analytics Model Report Dashboard"
                   class="img-fluid"
                 />
                 <p class="image-caption">
@@ -416,7 +420,7 @@
                 and discount effectiveness, and evaluates factors influencing
                 discount categories.
               </p>
-              <ul>
+              <ul class="styled-list">
                 <li>
                   Factors Influencing Discount Category: Variable Importance in
                   models like Forest, Gradient Boosting, and Decision Tree shows
@@ -439,59 +443,61 @@
                   insights into complex variable relationships.
                 </li>
               </ul>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>Model</th>
-                    <th>Accuracy (%)</th>
-                    <th>Advantages</th>
-                    <th>Disadvantages</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Random Forest</td>
-                    <td>99.3</td>
-                    <td>
-                      Stable, high accuracy, capable of handling high complexity
-                      variables.
-                    </td>
-                    <td>
-                      More difficult to interpret results compared to linear
-                      models.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Decision Tree</td>
-                    <td>97.4</td>
-                    <td>
-                      Simple interpretation, tree visualization helps dominant
-                      variable analysis.
-                    </td>
-                    <td>Prone to overfitting if not well-tuned.</td>
-                  </tr>
-                  <tr>
-                    <td>Gradient Boosting</td>
-                    <td>99.8</td>
-                    <td>High accuracy, performs well on noisy data.</td>
-                    <td>
-                      Higher computational time compared to Random Forest.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Neural Network</td>
-                    <td>97.5</td>
-                    <td>
-                      Handles non-linear relationships well, flexible for
-                      various data types.
-                    </td>
-                    <td>
-                      Requires long training time, difficult to interpret
-                      without additional visualization.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Accuracy (%)</th>
+                      <th>Advantages</th>
+                      <th>Disadvantages</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Random Forest</td>
+                      <td>99.3</td>
+                      <td>
+                        Stable, high accuracy, capable of handling high
+                        complexity variables.
+                      </td>
+                      <td>
+                        More difficult to interpret results compared to linear
+                        models.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Decision Tree</td>
+                      <td>97.4</td>
+                      <td>
+                        Simple interpretation, tree visualization helps dominant
+                        variable analysis.
+                      </td>
+                      <td>Prone to overfitting if not well-tuned.</td>
+                    </tr>
+                    <tr>
+                      <td>Gradient Boosting</td>
+                      <td>99.8</td>
+                      <td>High accuracy, performs well on noisy data.</td>
+                      <td>
+                        Higher computational time compared to Random Forest.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Neural Network</td>
+                      <td>97.5</td>
+                      <td>
+                        Handles non-linear relationships well, flexible for
+                        various data types.
+                      </td>
+                      <td>
+                        Requires long training time, difficult to interpret
+                        without additional visualization.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p class="image-caption">
                 Table 3: Summary of Accuracy, Advantages, and Disadvantages of
                 Predictive Models
@@ -518,7 +524,7 @@
               <div class="image-placeholder">
                 <img
                   src="assets/imgs/GadgetEra 11.png"
-                  alt="Text Analytics Report"
+                  alt="Text Analytics Report Dashboard"
                   class="img-fluid"
                 />
                 <p class="image-caption">Figure 32: Text Analytics Report</p>
@@ -527,54 +533,61 @@
                 This dashboard provides insights into customer sentiment,
                 complaint types, and review text patterns.
               </p>
-              <ul>
+              <ul class="styled-list">
                 <li>
-                  Customer Satisfaction Level Distribution: Recommendation:
-                  Focus on improving the experience of dissatisfied customers
-                  (39.4%) through discounts, priority customer service, or
-                  product quality improvements.
+                  <i class="bx bx-check-circle"></i> Customer Satisfaction Level
+                  Distribution: Recommendation: Focus on improving the
+                  experience of dissatisfied customers (39.4%) through
+                  discounts, priority customer service, or product quality
+                  improvements.
                 </li>
                 <li>
-                  Most Frequent Complaint Types: Recommendation: For delivery
-                  complaints (33.8%), improve logistics and real-time tracking.
-                  For price complaints (32.9%), consider competitive pricing and
-                  seasonal discounts. For performance complaints (33.4%),
-                  evaluate product quality and make improvements.
+                  <i class="bx bx-check-circle"></i> Most Frequent Complaint
+                  Types: Recommendation: For delivery complaints (33.8%),
+                  improve logistics and real-time tracking. For price complaints
+                  (32.9%), consider competitive pricing and seasonal discounts.
+                  For performance complaints (33.4%), evaluate product quality
+                  and make improvements.
                 </li>
                 <li>
-                  Most Frequent Keywords in Reviews: Recommendation: Focus on
-                  developing long-lasting batteries and improving the delivery
-                  experience, as these are frequently mentioned issues.
+                  <i class="bx bx-check-circle"></i> Most Frequent Keywords in
+                  Reviews: Recommendation: Focus on developing long-lasting
+                  batteries and improving the delivery experience, as these are
+                  frequently mentioned issues.
                 </li>
                 <li>
-                  Customer Rating Trend by Month: Recommendation: Identify
-                  rating drops in specific months (April-May) and conduct
-                  promotional campaigns or service improvements during those
-                  periods.
+                  <i class="bx bx-check-circle"></i> Customer Rating Trend by
+                  Month: Recommendation: Identify rating drops in specific
+                  months (April-May) and conduct promotional campaigns or
+                  service improvements during those periods.
                 </li>
                 <li>
-                  Sentiment Score by Delivery Method: Recommendation: Improve
-                  the delivery experience for In-Store Pickup and Home Delivery,
-                  as negative sentiment scores dominate.
+                  <i class="bx bx-check-circle"></i> Sentiment Score by Delivery
+                  Method: Recommendation: Improve the delivery experience for
+                  In-Store Pickup and Home Delivery, as negative sentiment
+                  scores dominate.
                 </li>
                 <li>
-                  Complaint Distribution by Month and Complaint Type:
-                  Recommendation: Further analyze months with high complaints
-                  (July, December) and optimize operations, e.g., by increasing
-                  staff to handle customer complaints during those periods.
+                  <i class="bx bx-check-circle"></i> Complaint Distribution by
+                  Month and Complaint Type: Recommendation: Further analyze
+                  months with high complaints (July, December) and optimize
+                  operations, e.g., by increasing staff to handle customer
+                  complaints during those periods.
                 </li>
                 <li>
-                  Customer Sentiment Distribution: Recommendation: With negative
-                  sentiment dominating, focus on in-depth analysis of negative
-                  reviews to determine specific steps like product development,
-                  more proactive customer service, or brand image campaigns.
+                  <i class="bx bx-check-circle"></i> Customer Sentiment
+                  Distribution: Recommendation: With negative sentiment
+                  dominating, focus on in-depth analysis of negative reviews to
+                  determine specific steps like product development, more
+                  proactive customer service, or brand image campaigns.
                 </li>
                 <li>
-                  Review Text Frequency: Recommendation: Analyze negative
-                  reviews in depth to identify root causes (e.g., battery
-                  issues, product design) and implement technical improvements.
-                  Optimize logistics, promote product advantages, and
-                  continuously monitor sentiment using text analytics.
+                  <i class="bx bx-check-circle"></i> Review Text Frequency:
+                  Recommendation: Analyze negative reviews in depth to identify
+                  root causes (e.g., battery issues, product design) and
+                  implement technical improvements. Optimize logistics, promote
+                  product advantages, and continuously monitor sentiment using
+                  text analytics.
                 </li>
               </ul>
 
@@ -697,7 +710,7 @@
                     <div class="sidebar-img">
                       <img
                         src="assets/imgs/project-1.png"
-                        alt="EduLearn"
+                        alt="EduLearn logo"
                         class="img-fluid"
                       />
                     </div>
@@ -716,7 +729,7 @@
                     <div class="sidebar-img">
                       <img
                         src="assets/imgs/project-2.png"
-                        alt="Medicalife"
+                        alt="Medicalife logo"
                         class="img-fluid"
                       />
                     </div>
@@ -734,7 +747,7 @@
                     <div class="sidebar-img">
                       <img
                         src="assets/imgs/project-3.png"
-                        alt="SmartStudy"
+                        alt="SmartStudy logo"
                         class="img-fluid"
                       />
                     </div>
@@ -752,7 +765,7 @@
                     <div class="sidebar-img">
                       <img
                         src="assets/imgs/project-4.png"
-                        alt="Tableau Dashboard"
+                        alt="Tableau Dashboard screenshot"
                         class="img-fluid"
                       />
                     </div>
@@ -770,7 +783,7 @@
                     <div class="sidebar-img">
                       <img
                         src="assets/imgs/project-5.png"
-                        alt="SAS Visual Analytics"
+                        alt="SAS Visual Analytics screenshot"
                         class="img-fluid"
                       />
                     </div>

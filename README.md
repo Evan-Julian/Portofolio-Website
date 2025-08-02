@@ -30,8 +30,7 @@ To run this project locally, follow these steps:
 1. Clone this repository:
    ```bash
    git clone https://github.com/Evan-Julian/Portofolio-Website.git
-
-
+   
 2. Navigate into the project folder:
    ```bash
    cd Portofolio-Website
